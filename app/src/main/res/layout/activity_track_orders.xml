@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B2344">
+
+    <TextView
+        android:id="@+id/tHome"
+        android:layout_width="333dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="39dp"
+        android:text="@string/track_orders"
+        android:textColor="#F0FFFF"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/menuButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:background="@null"
+        android:contentDescription="@string/todo1"
+        android:src="@drawable/ic_menu" />
+
+    <View
+        android:id="@+id/vgreenRec"
+        android:layout_width="match_parent"
+        android:layout_height="540dp"
+        android:layout_above="@id/vgreenRecDivider"
+        android:background="@drawable/rounded_rectangle" />
+
+    <View
+        android:id="@+id/vgreenRecDivider"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="32dp"
+        android:layout_toEndOf="@+id/circle_view"
+        android:text="@string/rufelle"
+        android:textColor="#F0FFFF"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/menuButton"
+        android:text="@string/lahug_cebu_city"
+        android:textColor="#F0FFFF"
+        android:textSize="15sp"
+        tools:ignore="RelativeOverlap" />
+
+    <View
+        android:id="@+id/circle_view"
+        android:layout_width="64dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/circle_shape" />
+
+</RelativeLayout>

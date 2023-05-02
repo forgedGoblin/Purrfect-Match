@@ -77,5 +77,41 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button shopButton = findViewById(R.id.shop_button);
+        shopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button msgButton = findViewById(R.id.messages_button);
+        msgButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MessagesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button trackAdoptButton = findViewById(R.id.traAdopt_button);
+        trackAdoptButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TrackAdoptionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button trackOrdersButton = findViewById(R.id.traOrder_button);
+        trackOrdersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TrackOrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }

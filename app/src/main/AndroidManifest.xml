@@ -12,6 +12,22 @@
         android:theme="@style/Theme.PurrfectMatchunpacked"
         tools:targetApi="31">
         <activity
+            android:name=".TrackOrdersActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".TrackAdoptionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".MessagesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".ShopActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
             android:name=".DonateActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
