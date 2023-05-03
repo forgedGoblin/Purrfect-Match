@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuPopupHelper;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -29,7 +28,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView menuButton = findViewById(R.id.menuButton);
-
+        try {
+            Connector connector = Connector.getConnector();
+            connector.update("INSERT INTO tblUser(fname, lname, age, phone, email)" +
+                    "VALUES (" + connector.format("Test") + ", " + connector.format("Test")+
+                    ", 0, " + connector.format("test@test.com") + ");");
+        } catch (SQLException e){
+            Toast.makeText(this, "Did not connect to database.", Toast.LENGTH_LONG);
+            System.out.printf(String.valueOf(e));
+        } catch (ClassNotFoundException e){
+            Toast.makeText(this, "Could not find driver.", Toast.LENGTH_LONG);
+        }
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,14 +92,41 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button shopButton = findViewById(R.id.shop_button);
+        shopButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ShopActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        // SQL connector here
-        Connector connect = new Connector(this);
-        SQLiteDatabase db = connect.getWritableDatabase();
-        connect.rawExec("INSERT INTO tblUser VALUES" +
-                "('francoplenos@try.com', 'Franco', 'Plenos', 'Lahug', '12345', '12345');", null);
-        System.out.printf("All is well");
+        Button msgButton = findViewById(R.id.messages_button);
+        msgButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, MessagesActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button trackAdoptButton = findViewById(R.id.traAdopt_button);
+        trackAdoptButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TrackAdoptionActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button trackOrdersButton = findViewById(R.id.traOrder_button);
+        trackOrdersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, TrackOrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
-
-
 }
