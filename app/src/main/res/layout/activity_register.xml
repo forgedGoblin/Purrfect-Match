@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tvcatparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B2344">
+
+    <ImageView
+        android:id="@+id/greenWave"
+        android:layout_width="627dp"
+        android:layout_height="790dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/PMlogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/green_register"
+        tools:ignore="ImageContrastCheck,VisualLintBounds" />
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="208dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="77dp"
+            android:layout_marginBottom="531dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/create_account"
+            android:textColor="#CDE9FF"
+            android:textSize="34sp"
+            tools:ignore="TextSizeCheck" />
+
+        <EditText
+            android:id="@+id/emailEMail"
+            android:layout_width="359dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="312dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textColorHint="#263238"
+            tools:ignore="VisualLintTextFieldSize,TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/passPass"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="232dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:textColorHint="#263238"
+            tools:ignore="VisualLintTextFieldSize" />
+
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="358dp"
+            android:layout_height="66dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginBottom="147dp"
+            android:background="@drawable/rounded_square"
+            android:text="@string/register"
+            android:textColor="#172129"
+            android:textSize="16sp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="358dp"
+            android:layout_height="66dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/rounded_square"
+            android:text="@string/login"
+            android:textColor="#172129"
+            android:textSize="16sp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/login_button"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="175dp"
+            android:layout_marginEnd="166dp"
+            android:layout_marginBottom="21dp"
+            android:text="@string/or"
+            android:textColor="#1B5E20"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/nameName"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="382dp"
+            android:ems="10"
+            android:hint="@string/full_name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#263238"
+            android:autofillHints=""
+            tools:ignore="VisualLintTextFieldSize" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

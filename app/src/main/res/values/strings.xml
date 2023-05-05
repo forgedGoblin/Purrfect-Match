@@ -17,4 +17,16 @@
     <string name="track_orders">Track Orders</string>
     <string name="adoptAct">Adopt</string>
     <string name="donateAct">Donate</string>
+    <string name="PMlogo">TODO</string>
+    <string name="welcome">Welcome to...</string>
+    <string name="welcome_to">Welcome to...</string>
+    <string name="start">Start</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="welcome_back_fellow_cat_parent">Welcome back, fellow cat parent!</string>
+    <string name="password">Password</string>
+    <string name="or">or</string>
+    <string name="email">Email</string>
+    <string name="create_account">Create Account</string>
+    <string name="full_name">Full Name</string>
 </resources>
