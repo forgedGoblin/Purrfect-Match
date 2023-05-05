@@ -27,17 +27,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         ImageView menuButton = findViewById(R.id.menuButton);
-        try {
-            Connector connector = Connector.getConnector();
-            connector.update("INSERT INTO tblUser(fname, lname, age, phone, email)" +
-                    "VALUES (" + connector.format("Test") + ", " + connector.format("Test")+
-                    ", 0, " + connector.format("test@test.com") + ");");
-        } catch (SQLException e){
-            Toast.makeText(this, "Did not connect to database.", Toast.LENGTH_LONG);
-            System.out.printf(String.valueOf(e));
-        } catch (ClassNotFoundException e){
-            Toast.makeText(this, "Could not find driver.", Toast.LENGTH_LONG);
-        }
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

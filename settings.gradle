@@ -14,4 +14,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "PurrfectMatch(unpacked)"
 include ':app'
-include ':libs:mysql-connector-java-8.0.jar'

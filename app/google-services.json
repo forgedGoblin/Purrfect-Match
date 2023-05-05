@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "820376621662",
+    "project_id": "purrfect-match-b4b6d",
+    "storage_bucket": "purrfect-match-b4b6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820376621662:android:3860269baa4bc97597dacf",
+        "android_client_info": {
+          "package_name": "com.example.purrfectmatchunpacked"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "820376621662-7l4138ci7i00d40m78c5jltk07u61vr0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZoVMQviUVJgjCVpP-QqP8vHBFSA1D3c0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "820376621662-7l4138ci7i00d40m78c5jltk07u61vr0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
