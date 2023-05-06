@@ -7,6 +7,9 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
+
+import com.google.firebase.auth.FirebaseAuth;
+
 public class Connector extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "dbPurrfect";
     private static int DATABASE_VERSION = 1;
