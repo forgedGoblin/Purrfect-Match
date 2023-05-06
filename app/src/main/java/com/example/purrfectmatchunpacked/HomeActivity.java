@@ -38,7 +38,7 @@ public class HomeActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.account:
-                                Toast.makeText(HomeActivity.this, "Account has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(HomeActivity.this, RegisterActivity.class));
                                 return true;
                             case R.id.wallet:
                                 Toast.makeText(HomeActivity.this, "Wallet has been pressed", Toast.LENGTH_SHORT).show();
