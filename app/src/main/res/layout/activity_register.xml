@@ -33,18 +33,18 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="208dp"
-            android:layout_height="wrap_content"
+            android:layout_width="347dp"
+            android:layout_height="193dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="3dp"
-            android:layout_marginTop="77dp"
-            android:layout_marginBottom="531dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="429dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/create_account"
             android:textColor="#CDE9FF"
-            android:textSize="34sp"
+            android:textSize="60sp"
             tools:ignore="TextSizeCheck" />
 
         <EditText
