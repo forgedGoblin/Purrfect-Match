@@ -55,8 +55,8 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="312dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginBottom="289dp"
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/email"
@@ -130,22 +130,42 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/nameName"
+            android:id="@+id/lName"
             android:layout_width="358dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="11dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="382dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="345dp"
+            android:autofillHints=""
             android:ems="10"
             android:hint="@string/full_name"
             android:inputType="textPersonName"
             android:minHeight="48dp"
             android:textColorHint="#263238"
+            tools:ignore="VisualLintTextFieldSize"
+            tools:text="Last Name" />
+
+        <EditText
+            android:id="@+id/fName"
+            android:layout_width="358dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="401dp"
             android:autofillHints=""
-            tools:ignore="VisualLintTextFieldSize" />
+            android:ems="10"
+            android:hint="@string/full_name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHint="#263238"
+            tools:ignore="VisualLintTextFieldSize"
+            tools:text="First Name" />
 
     </RelativeLayout>
 
