@@ -1,11 +1,16 @@
 plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
+
 }
 
 android {
     namespace 'com.example.purrfectmatchunpacked'
     compileSdk 33
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
 
     defaultConfig {
         applicationId "com.example.purrfectmatchunpacked"
@@ -17,6 +22,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     buildTypes {
         release {
             minifyEnabled false
@@ -24,10 +30,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 }
+
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -36,21 +43,21 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-   // implementation project('libs:mysql-connector-java-8.0.16')
-    // This dependency is exported to consumers, that is to say found on their compile classpath.
-    api 'org.apache.commons:commons-math3:3.6.1'
+    implementation 'androidx.sqlite:sqlite:2.3.1'
+    implementation 'org.apache.commons:commons-math3:3.6.1'
 
-    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-  //   implementation 'com.google.guava:guava:22.0'
-
-    // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
-    implementation 'androidx.sqlite:sqlite:2.2.0'
-
-
+    // Firebase
     implementation platform('com.google.firebase:firebase-bom:32.0.0')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-firestore:24.6.0'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
     implementation 'com.google.android.gms:play-services-auth:20.5.0'
+
+    // Firestore
+  //  implementation 'com.google.cloud:google-cloud-firestore:2.2.0'
+    implementation 'com.google.auth:google-auth-library-oauth2-http:0.22.0'
 }
 
+
+apply plugin: 'com.google.gms.google-services'

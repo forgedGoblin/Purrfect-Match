@@ -1,5 +1,6 @@
 package com.example.purrfectmatchunpacked;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,19 +13,46 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.purrfectmatchunpacked.backend.Connector;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.w3c.dom.Document;
 
 import java.sql.SQLException;
 
 
 public class HomeActivity extends AppCompatActivity {
-
+    TextView user;
+    FirebaseAuth auth;
+    FirebaseFirestore db;
+    DocumentReference userInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        user = findViewById(R.id.tvName);
+        auth = FirebaseAuth.getInstance();
+        db = FirebaseFirestore.getInstance();
+        userInfo = db.collection("users").document(auth.getCurrentUser().getEmail());
+        userInfo.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful())
+                {
+                    user.setText((String)task.getResult().get("fname"));
+                }
+            }
+        });
+
 
         ImageView menuButton = findViewById(R.id.menuButton);
         menuButton.setOnClickListener(new View.OnClickListener() {
