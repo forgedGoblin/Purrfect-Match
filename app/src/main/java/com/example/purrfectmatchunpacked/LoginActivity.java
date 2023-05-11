@@ -11,8 +11,11 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 
 public class LoginActivity extends AppCompatActivity {
     FirebaseAuth auth;
@@ -44,10 +47,15 @@ public class LoginActivity extends AppCompatActivity {
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                                 startActivity(intent);
                             }
-                            else
-                            {
-                                Toast.makeText(LoginActivity.this, "Check your credentials!", Toast.LENGTH_LONG).show();
-                            }
+                        }
+                    }).addOnFailureListener(exception -> {
+                        String messageAct = "";
+                        if (exception instanceof FirebaseAuthWeakPasswordException) {
+                            messageAct = "Please use a stronger password.";
+                        } else if (exception instanceof FirebaseAuthUserCollisionException) {
+                            messageAct = "This user already exists. PLease login.";
+                        }  else if (exception instanceof FirebaseNetworkException) {
+                            messageAct = "This user is not connected to the internet. Please try again.";
                         }
                     });
 

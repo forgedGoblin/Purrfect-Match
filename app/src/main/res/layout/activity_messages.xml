@@ -48,18 +48,6 @@
         android:layout_alignParentBottom="true"/>
 
     <TextView
-        android:id="@+id/tvName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="32dp"
-        android:layout_toEndOf="@+id/circle_view"
-        android:text="@string/rufelle"
-        android:textColor="#F0FFFF"
-        android:textSize="15sp" />
-
-    <TextView
         android:id="@+id/tvAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
