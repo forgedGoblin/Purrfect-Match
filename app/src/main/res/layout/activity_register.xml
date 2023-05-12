@@ -47,6 +47,19 @@
             android:textSize="60sp"
             tools:ignore="TextSizeCheck" />
 
+        <TextView
+            android:id="@+id/warning2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="182dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TextView"
+            android:textColor="#C60E0E"
+            android:textColorHint="#FF0505" />
+
         <EditText
             android:id="@+id/emailEMail"
             android:layout_width="359dp"

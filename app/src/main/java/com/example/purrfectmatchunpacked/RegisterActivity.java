@@ -7,14 +7,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.FirebaseAuth;
 
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.identity.BeginSignInRequest;
@@ -24,7 +27,9 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
@@ -46,6 +51,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText password;
     EditText fname;
     EditText lname;
+    TextView warning;
 
     BeginSignInRequest signInRequest;
     @Override
@@ -55,6 +61,8 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
         authenticator = FirebaseAuth.getInstance();
         register = findViewById(R.id.register_button);
+        warning = findViewById(R.id.warning2);
+        warning.setVisibility(View.INVISIBLE);
         email = findViewById(R.id.emailEMail);
         password = findViewById(R.id.passPass);
         fname = findViewById(R.id.fName);
@@ -108,12 +116,28 @@ public class RegisterActivity extends AppCompatActivity {
                         else
                         {
                             Log.w(TAG, "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(RegisterActivity.this, task.getException().toString(),
-                                    Toast.LENGTH_SHORT).show();
                             updateUI(null);
                         }
 
                     }
+                }).addOnFailureListener(exception -> {
+                    String messageAct = "";
+                    if (exception instanceof FirebaseAuthWeakPasswordException) {
+                        messageAct = "Please use a stronger password.";
+                    } else if (exception instanceof FirebaseAuthUserCollisionException) {
+                        messageAct = "This user already exists. PLease login.";
+                    }  else if (exception instanceof FirebaseNetworkException) {
+                        messageAct = "This user is not connected to the internet. Please try again.";
+                    } else if (exception instanceof FirebaseAuthInvalidCredentialsException) {
+                        messageAct = "The format of the credentials is incorrect. Please try again.";
+                    }
+                    else if (exception instanceof Exception) {
+                        messageAct = "General exception occurred with error code: " + exception.toString();
+                    }
+
+
+                    warning.setText(messageAct);
+                    warning.setVisibility(View.VISIBLE);
                 });
 
         signInRequest = BeginSignInRequest.builder()
