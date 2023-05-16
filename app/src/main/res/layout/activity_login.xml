@@ -123,6 +123,20 @@
             android:text="@string/or"
             android:textColor="#6A000000"
             android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="220dp"
+            android:fontFamily="sans-serif-black"
+            android:text="TextView"
+            android:textColor="#C60E0E"
+            android:textColorHint="#FF0505" />
+
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
