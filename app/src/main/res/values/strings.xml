@@ -37,4 +37,9 @@
     <string name="female">Female</string>
     <string name="cats_of_it_park">Cats of IT Park</string>
     <string name="ADOPT">ADOPT</string>
+    <string name="DONATE">DONATE</string>
+    <string name="SHOP">SHOP</string>
+    <string name="MESSAGES">MESSAGES</string>
+    <string name="TRACKADOPTION">TRACK ADOPTION</string>
+    <string name="TRACKORDER">TRACK ORDER</string>
 </resources>
