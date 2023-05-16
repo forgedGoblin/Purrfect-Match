@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(view -> {
             if (email.getText().toString().isEmpty() || password.getText().toString().isEmpty())
             {
-                Toast.makeText(LoginActivity.this, "Please fill-in all the fields", Toast.LENGTH_LONG);
+                Toast.makeText(LoginActivity.this, "Please fill-in all the fields", Toast.LENGTH_LONG).show();
                 return;
             }
             auth.signInWithEmailAndPassword(email.getText().toString(), password.getText().toString())
