@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -90,7 +91,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        Button adoptButton = findViewById(R.id.adopt_button);
+        ImageButton adoptButton = findViewById(R.id.adopt_button);
         adoptButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
