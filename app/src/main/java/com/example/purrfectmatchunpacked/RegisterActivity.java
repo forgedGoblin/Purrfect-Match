@@ -12,11 +12,14 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -70,6 +73,12 @@ public class RegisterActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
         fname.setHint("First Name");
         lname.setHint("Last Name");
+
+        ImageView registerWave = (ImageView) findViewById(R.id.greenWave);
+        Resources res = this.getResources();
+        int newColor = res.getColor(R.color.secondary);
+        registerWave.setColorFilter(newColor, PorterDuff.Mode.SRC_ATOP);
+
 
 
 

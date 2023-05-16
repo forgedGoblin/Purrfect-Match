@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B2344">
+    android:background="@color/primary">
 
     <TextView
         android:id="@+id/tHome"
@@ -32,14 +33,101 @@
         android:layout_marginEnd="25dp"
         android:background="@null"
         android:contentDescription="@string/todo1"
-        android:src="@drawable/ic_menu" />
+        android:src="@drawable/ic_menu"
+        tools:ignore="ImageContrastCheck,DuplicateSpeakableTextCheck" />
 
     <View
         android:id="@+id/vgreenRec"
         android:layout_width="match_parent"
         android:layout_height="540dp"
         android:layout_above="@id/vgreenRecDivider"
+        android:layout_marginBottom="0dp"
         android:background="@drawable/rounded_rectangle" />
+
+    <View
+        android:id="@+id/vGenderInfoGray3"
+        android:layout_width="209dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="157dp"
+        android:background="@drawable/rounded_box_adopt_gray" />
+
+    <View
+        android:id="@+id/vOrgInfo"
+        android:layout_width="143dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="157dp"
+        android:background="@drawable/rounded_box_adopt_white" />
+
+
+    <View
+        android:id="@+id/vGenderInfoGray2"
+        android:layout_width="209dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="91dp"
+        android:background="@drawable/rounded_box_adopt_gray" />
+
+    <View
+        android:id="@+id/vAgeInfo"
+        android:layout_width="144dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="91dp"
+        android:background="@drawable/rounded_box_adopt_white" />
+
+    <View
+        android:id="@+id/vGenderInfo"
+        android:layout_width="166dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="202dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_box_adopt_white" />
+
+    <View
+        android:id="@+id/vGenderInfoGray"
+        android:layout_width="209dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_box_adopt_gray" />
+
+    <View
+        android:id="@+id/vi"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_box_adopt_white" />
 
     <View
         android:id="@+id/vgreenRecDivider"
@@ -57,7 +145,8 @@
         android:layout_toEndOf="@+id/circle_view"
         android:text="@string/rufelle"
         android:textColor="#F0FFFF"
-        android:textSize="15sp" />
+        android:textSize="15sp"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/tvAddress"
@@ -81,5 +170,114 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="11dp"
         android:background="@drawable/circle_shape" />
+
+    <TextView
+        android:id="@+id/tvCleo"
+        android:layout_width="109dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="158dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="475dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/cleo"
+        android:textColor="#F0FFFF"
+        android:textSize="35sp" />
+
+    <ImageView
+        android:id="@+id/ivCleo"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="89dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="230dp"
+        android:contentDescription="@string/todo"
+        app:srcCompat="@drawable/cleoborderradius" />
+
+    <TextView
+        android:id="@+id/tvOrganization"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="169dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/organization"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvCfITP"
+        android:layout_width="151dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="203dp"
+        android:layout_marginBottom="170dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/cats_of_it_park"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvFemale"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="236dp"
+        android:layout_marginBottom="103dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/female"
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="236dp"
+        android:layout_marginBottom="46dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/_2_years"
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvGender"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginBottom="104dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/gender"
+        android:textColor="@color/blue"
+        android:textSize="18sp"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="89dp"
+        android:layout_marginBottom="44dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/age"
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
 
 </RelativeLayout>

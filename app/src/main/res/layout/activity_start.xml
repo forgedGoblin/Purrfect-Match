@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0B2344">
+    android:background="@color/primary">
 
     <RelativeLayout
         android:id="@+id/relative_layout"
@@ -60,7 +60,7 @@
             android:layout_marginBottom="28dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/welcome_to"
-            android:textColor="#15212B"
+            android:textColor="#F0FFFF"
             android:textSize="34sp"
             tools:ignore="TextSizeCheck" />
 

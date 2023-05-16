@@ -4,16 +4,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseException;
 import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,6 +36,12 @@ public class LoginActivity extends AppCompatActivity {
         warning.setVisibility(View.INVISIBLE);
         email = findViewById(R.id.emailLogin);
         password = findViewById(R.id.passwordLogin);
+
+        ImageView registerWave = findViewById(R.id.greenWave);
+        Resources res = this.getResources();
+        int newColor = res.getColor(R.color.secondary);
+        registerWave.setColorFilter(newColor, PorterDuff.Mode.SRC_ATOP);
+
         auth = FirebaseAuth.getInstance();
         if (auth.getCurrentUser() != null) startActivity(new Intent(LoginActivity.this, HomeActivity.class));
         Button loginButton = findViewById(R.id.login_button);
