@@ -56,8 +56,9 @@ dependencies {
     implementation 'com.google.android.gms:play-services-auth:20.5.0'
 
     // Firestore
-  //  implementation 'com.google.cloud:google-cloud-firestore:2.2.0'
+    //  implementation 'com.google.cloud:google-cloud-firestore:2.2.0'
     implementation 'com.google.auth:google-auth-library-oauth2-http:0.22.0'
+    implementation 'com.google.firebase:firebase-storage-ktx'
 }
 
 

@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.purrfectmatchunpacked.backend.Globals;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseNetworkException;
@@ -22,6 +23,10 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.storage.FirebaseStorage;
 
 public class LoginActivity extends AppCompatActivity {
     FirebaseAuth auth;
@@ -43,7 +48,6 @@ public class LoginActivity extends AppCompatActivity {
         registerWave.setColorFilter(newColor, PorterDuff.Mode.SRC_ATOP);
 
         auth = FirebaseAuth.getInstance();
-        if (auth.getCurrentUser() != null) startActivity(new Intent(LoginActivity.this, HomeActivity.class));
         Button loginButton = findViewById(R.id.login_button);
         loginButton.setOnClickListener(view -> {
             if (email.getText().toString().isEmpty() || password.getText().toString().isEmpty())
@@ -57,10 +61,10 @@ public class LoginActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful())
                             {
-                                warning.setVisibility(View.INVISIBLE);
-                                Toast.makeText(LoginActivity.this, "Login success!", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                                startActivity(intent);
+                                Globals.storage = FirebaseStorage.getInstance();
+                                Globals.initAuth();
+                                initUser();
+
                             }
                         }
                     }).addOnFailureListener(exception -> {
@@ -70,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                         } else if (exception instanceof FirebaseAuthUserCollisionException) {
                             messageAct = "This user already exists. PLease login.";
                         }  else if (exception instanceof FirebaseNetworkException) {
-                            messageAct = "This user is not connected to the internet. Please try again.";
+                               messageAct = "This user is not connected to the internet. Please try again.";
                         } else if (exception instanceof FirebaseAuthInvalidCredentialsException) {
                             messageAct = "The format of the credentials is incorrect. Please try again.";
                         }
@@ -78,10 +82,11 @@ public class LoginActivity extends AppCompatActivity {
                             messageAct = "General exception occurred with error code: " + exception.toString();
                         }
 
-
-                       warning.setText(messageAct);
+                        warning.setText(messageAct);
                         warning.setVisibility(View.VISIBLE);
+
                     });
+
 
 
 
@@ -94,4 +99,21 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         });
     }
+
+    public void initUser(){
+        Globals.db = FirebaseFirestore.getInstance();
+        DocumentReference user = Globals.db.collection("users").document(email.getText().toString());
+        user.get().addOnCompleteListener( v -> {
+            var userDocument = v.getResult();
+            Globals.initUser((String)userDocument.get("email"),(String)userDocument.get("fname"), (String)userDocument.get("lname"));
+            warning.setVisibility(View.INVISIBLE);
+            Toast.makeText(LoginActivity.this, "Login success!", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
+        }).addOnFailureListener( x -> {
+            warning.setText("Invalid error instance with the server.");
+            warning.setVisibility(View.VISIBLE);
+        });
+    }
+
 }

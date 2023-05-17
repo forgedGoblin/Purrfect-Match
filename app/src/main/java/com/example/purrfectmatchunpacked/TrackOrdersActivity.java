@@ -10,7 +10,10 @@ import android.view.SubMenu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.purrfectmatchunpacked.backend.Globals;
 
 public class TrackOrdersActivity extends AppCompatActivity {
 
@@ -20,7 +23,8 @@ public class TrackOrdersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_track_orders);
 
         ImageView menuButton = findViewById(R.id.menuButton);
-
+        TextView name = findViewById(R.id.tvName);
+        name.setText(Globals.currentUser.fname);
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
