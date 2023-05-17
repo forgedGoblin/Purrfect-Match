@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
-public class MessagesActivity extends AppCompatActivity {
+public class AnnouncementsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class MessagesActivity extends AppCompatActivity {
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PopupMenu popupMenu = new PopupMenu(MessagesActivity.this, view);
+                PopupMenu popupMenu = new PopupMenu(AnnouncementsActivity.this, view);
                 popupMenu.getMenuInflater().inflate(R.menu.popup_menu, popupMenu.getMenu());
 
                 popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -32,13 +32,13 @@ public class MessagesActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.account:
-                                Toast.makeText(MessagesActivity.this, "Account has been pressed", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AnnouncementsActivity.this, "Account has been pressed", Toast.LENGTH_SHORT).show();
                                 return true;
                             case R.id.wallet:
-                                Toast.makeText(MessagesActivity.this, "Wallet has been pressed", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AnnouncementsActivity.this, "Wallet has been pressed", Toast.LENGTH_SHORT).show();
                                 return true;
                             case R.id.settings:
-                                Toast.makeText(MessagesActivity.this, "Settings has been pressed", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(AnnouncementsActivity.this, "Settings has been pressed", Toast.LENGTH_SHORT).show();
                                 return true;
                             default:
                                 return false;

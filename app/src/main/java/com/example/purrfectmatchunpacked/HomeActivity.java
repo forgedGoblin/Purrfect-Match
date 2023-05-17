@@ -118,11 +118,11 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton msgButton = findViewById(R.id.messages_button);
-        msgButton.setOnClickListener(new View.OnClickListener() {
+        ImageButton announceButton = findViewById(R.id.announce_button);
+        announceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, MessagesActivity.class);
+                Intent intent = new Intent(HomeActivity.this, AnnouncementsActivity.class);
                 startActivity(intent);
             }
         });

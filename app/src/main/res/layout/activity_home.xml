@@ -46,9 +46,9 @@
         <View
             android:id="@+id/vgreenRec"
             android:layout_width="match_parent"
-            android:layout_height="540dp"
+            android:layout_height="542dp"
             android:layout_above="@id/vgreenRecDivider"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="0dp"
             android:background="@drawable/rounded_rectangle" />
 
         <View
@@ -65,14 +65,14 @@
             android:id="@+id/vDonate"
             android:layout_width="165dp"
             android:layout_height="146dp"
-            android:layout_above="@+id/vMessages"
+            android:layout_above="@+id/vAnnounce"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="15dp"
             android:background="@drawable/rounded_square" />
 
         <View
-            android:id="@+id/vMessages"
+            android:id="@+id/vAnnounce"
             android:layout_width="165dp"
             android:layout_height="146dp"
             android:layout_alignParentEnd="true"
@@ -244,13 +244,13 @@
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <ImageButton
-            android:id="@+id/messages_button"
+            android:id="@+id/announce_button"
             android:layout_width="163dp"
             android:layout_height="97dp"
-            android:layout_alignStart="@+id/vMessages"
-            android:layout_alignTop="@+id/vMessages"
-            android:layout_alignEnd="@+id/vMessages"
-            android:layout_alignBottom="@+id/vMessages"
+            android:layout_alignStart="@+id/vAnnounce"
+            android:layout_alignTop="@+id/vAnnounce"
+            android:layout_alignEnd="@+id/vAnnounce"
+            android:layout_alignBottom="@+id/vAnnounce"
             android:layout_marginStart="0dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="2dp"
@@ -258,7 +258,7 @@
             android:background="#00FFFFFF"
             android:backgroundTint="#00FF0000"
             android:contentDescription="@string/adopt"
-            app:srcCompat="@drawable/messages"
+            app:srcCompat="@drawable/announcements"
             tools:ignore="DuplicateSpeakableTextCheck" />
 
         <ImageButton
@@ -346,17 +346,17 @@
             android:id="@+id/tvMessage"
             android:layout_width="129dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/vMessages"
-            android:layout_alignEnd="@+id/vMessages"
-            android:layout_alignBottom="@+id/vMessages"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="12dp"
+            android:layout_alignStart="@+id/vAnnounce"
+            android:layout_alignEnd="@+id/vAnnounce"
+            android:layout_alignBottom="@+id/vAnnounce"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="25dp"
             android:fontFamily="sans-serif-medium"
             android:letterSpacing="0.1"
-            android:text="@string/MESSAGES"
+            android:text="ANNOUNCEMENTS"
             android:textColor="#172129"
-            android:textSize="16sp" />
+            android:textSize="12sp" />
 
     </RelativeLayout>
 

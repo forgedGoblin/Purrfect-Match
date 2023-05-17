@@ -38,8 +38,9 @@
     <string name="cats_of_it_park">Cats of IT Park</string>
     <string name="ADOPT">ADOPT</string>
     <string name="DONATE">DONATE</string>
-    <string name="SHOP">SHOP</string>
-    <string name="MESSAGES">MESSAGES</string>
+    <string name="SHOP">SHOP</string>S
     <string name="TRACKADOPTION">TRACK ADOPTION</string>
     <string name="TRACKORDER">TRACK ORDER</string>
+    <string name="add_button">Add Button</string>
+    <string name="choose_cat">Choose Cat</string>
 </resources>

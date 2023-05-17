@@ -8,15 +8,16 @@
 
     <Button
         android:id="@+id/addButton"
-        android:layout_width="wrap_content"
+        android:layout_width="125dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/vgreenRecDivider"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="158dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="31dp"
-        android:text="Add Button"
+        android:layout_marginStart="147dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="26dp"
+        android:backgroundTint="#F1F1F1"
+        android:text="@string/add_button"
         android:textColor="@color/black" />
 
     <TextView
@@ -29,7 +30,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="17dp"
-        android:text="Choose Cat"
+        android:text="@string/choose_cat"
         android:textColor="#F0FFFF"
         android:textSize="65sp"
         android:textStyle="bold"
@@ -67,12 +68,12 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_weight="1">
+        android:contentDescription="@string/ADOPT">
 
         <LinearLayout
             android:id="@+id/buttonContainer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical" />
 
     </ScrollView>
