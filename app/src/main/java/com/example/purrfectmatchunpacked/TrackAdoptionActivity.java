@@ -10,7 +10,10 @@ import android.view.SubMenu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.purrfectmatchunpacked.backend.Globals;
 
 public class TrackAdoptionActivity extends AppCompatActivity {
 
@@ -18,7 +21,8 @@ public class TrackAdoptionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_adoption);
-
+        TextView name = findViewById(R.id.tvName);
+        name.setText(Globals.currentUser.fname);
         ImageView menuButton = findViewById(R.id.menuButton);
 
         menuButton.setOnClickListener(new View.OnClickListener() {

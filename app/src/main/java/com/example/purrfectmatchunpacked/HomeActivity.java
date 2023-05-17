@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.purrfectmatchunpacked.backend.Connector;
+import com.example.purrfectmatchunpacked.backend.Globals;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -41,19 +42,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         user = findViewById(R.id.tvName);
-        auth = FirebaseAuth.getInstance();
-        db = FirebaseFirestore.getInstance();
-        userInfo = db.collection("users").document(auth.getCurrentUser().getEmail());
-        userInfo.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful())
-                {
-                    user.setText((String)task.getResult().get("fname"));
-                }
-            }
-        });
-
+        user.setText(Globals.currentUser.fname);
 
         ImageView menuButton = findViewById(R.id.menuButton);
         menuButton.setOnClickListener(new View.OnClickListener() {
