@@ -39,7 +39,8 @@
             android:layout_marginEnd="25dp"
             android:background="@null"
             android:contentDescription="@string/todo1"
-            android:src="@drawable/ic_menu" />
+            android:src="@drawable/ic_menu"
+            tools:ignore="ImageContrastCheck" />
 
 
         <View
@@ -47,20 +48,86 @@
             android:layout_width="match_parent"
             android:layout_height="540dp"
             android:layout_above="@id/vgreenRecDivider"
-            android:layout_marginBottom="4dp"
+            android:layout_marginBottom="3dp"
             android:background="@drawable/rounded_rectangle" />
 
         <View
-            android:id="@+id/vOrgInfo"
-            android:layout_width="wrap_content"
+            android:id="@+id/vAdopt"
+            android:layout_width="165dp"
             android:layout_height="146dp"
-            android:layout_above="@+id/shop_button"
+            android:layout_above="@+id/vShop"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="227dp"
+            android:layout_marginStart="20dp"
             android:layout_marginBottom="15dp"
             android:background="@drawable/rounded_square" />
+
+        <View
+            android:id="@+id/vDonate"
+            android:layout_width="165dp"
+            android:layout_height="146dp"
+            android:layout_above="@+id/vMessages"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/rounded_square" />
+
+        <View
+            android:id="@+id/vMessages"
+            android:layout_width="165dp"
+            android:layout_height="146dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="190dp"
+            android:background="@drawable/rounded_square" />
+
+        <View
+            android:id="@+id/vShop"
+            android:layout_width="165dp"
+            android:layout_height="146dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="193dp"
+            android:background="@drawable/rounded_square" />
+
+
+        <View
+            android:id="@+id/vtraAdoption"
+            android:layout_width="165dp"
+            android:layout_height="146dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="33dp"
+            android:background="@drawable/rounded_square" />
+
+        <View
+            android:id="@+id/vtraOrders"
+            android:layout_width="165dp"
+            android:layout_height="146dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="33dp"
+            android:background="@drawable/rounded_square" />
+
+        <TextView
+            android:id="@+id/tvDonate"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/vDonate"
+            android:layout_alignEnd="@+id/vDonate"
+            android:layout_alignBottom="@+id/vDonate"
+            android:layout_marginStart="33dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.1"
+            android:text="@string/DONATE"
+            android:textColor="#172129"
+            android:textSize="16sp"
+            tools:ignore="TextSizeCheck" />
 
         <View
             android:id="@+id/vgreenRecDivider"
@@ -104,82 +171,14 @@
             android:background="@drawable/circle_shape" />
 
 
-        <Button
-            android:id="@+id/shop_button"
-            android:layout_width="165dp"
-            android:layout_height="145dp"
-            android:layout_above="@+id/traAdopt_button"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="18dp"
-            android:layout_marginBottom="195dp"
-            android:background="@drawable/rounded_square"
-            android:text="@string/shop"
-            android:textColor="#172129"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/traAdopt_button"
-            android:layout_width="165dp"
-            android:layout_height="145dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="19dp"
-            android:layout_marginBottom="34dp"
-            android:background="@drawable/rounded_square"
-            android:text="@string/track_adoption"
-            android:textColor="#172129"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/donate_button"
-            android:layout_width="165dp"
-            android:layout_height="145dp"
-            android:layout_above="@+id/shop_button"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="19dp"
-            android:layout_marginBottom="15dp"
-            android:background="@drawable/rounded_square"
-            android:text="@string/donate"
-            android:textColor="#172129"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/messages_button"
-            android:layout_width="165dp"
-            android:layout_height="145dp"
-            android:layout_above="@+id/traAdopt_button"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="19dp"
-            android:layout_marginBottom="195dp"
-            android:background="@drawable/rounded_square"
-            android:text="@string/messages"
-            android:textColor="#172129"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/traOrder_button"
-            android:layout_width="165dp"
-            android:layout_height="145dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="19dp"
-            android:layout_marginBottom="34dp"
-            android:background="@drawable/rounded_square"
-            android:text="@string/track_orders"
-            android:textColor="#172129"
-            android:textSize="16sp"
-            tools:ignore="TextSizeCheck" />
-
         <ImageButton
             android:id="@+id/adopt_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/vOrgInfo"
-            android:layout_alignTop="@+id/vOrgInfo"
-            android:layout_alignEnd="@+id/vOrgInfo"
-            android:layout_alignBottom="@+id/vOrgInfo"
+            android:layout_alignStart="@+id/vAdopt"
+            android:layout_alignTop="@+id/vAdopt"
+            android:layout_alignEnd="@+id/vAdopt"
+            android:layout_alignBottom="@+id/vAdopt"
             android:layout_marginStart="0dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="0dp"
@@ -187,21 +186,175 @@
             android:background="#00FFFFFF"
             android:backgroundTint="#00FF0000"
             android:contentDescription="@string/adopt"
-            app:srcCompat="@drawable/adoptcat" />
+            app:srcCompat="@drawable/adoptcat"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/shop_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/vShop"
+            android:layout_alignTop="@+id/vShop"
+            android:layout_alignEnd="@+id/vShop"
+            android:layout_alignBottom="@+id/vShop"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="39dp"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#00FF0000"
+            android:contentDescription="@string/adopt"
+            app:srcCompat="@drawable/shop"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/traAdopt_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/vtraAdoption"
+            android:layout_alignTop="@+id/vtraAdoption"
+            android:layout_alignEnd="@+id/vtraAdoption"
+            android:layout_alignBottom="@+id/vtraAdoption"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginBottom="39dp"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#00FF0000"
+            android:contentDescription="@string/adopt"
+            app:srcCompat="@drawable/track_adoption"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/traOrder_button"
+            android:layout_width="165dp"
+            android:layout_height="102dp"
+            android:layout_alignStart="@+id/vtraOrders"
+            android:layout_alignTop="@+id/vtraOrders"
+            android:layout_alignEnd="@+id/vtraOrders"
+            android:layout_alignBottom="@+id/vtraOrders"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginBottom="42dp"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#00FF0000"
+            android:contentDescription="@string/adopt"
+            app:srcCompat="@drawable/track_order"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/messages_button"
+            android:layout_width="163dp"
+            android:layout_height="97dp"
+            android:layout_alignStart="@+id/vMessages"
+            android:layout_alignTop="@+id/vMessages"
+            android:layout_alignEnd="@+id/vMessages"
+            android:layout_alignBottom="@+id/vMessages"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="45dp"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#00FF0000"
+            android:contentDescription="@string/adopt"
+            app:srcCompat="@drawable/messages"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/donate_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/vDonate"
+            android:layout_alignTop="@+id/vDonate"
+            android:layout_alignEnd="@+id/vDonate"
+            android:layout_alignBottom="@+id/vDonate"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="40dp"
+            android:background="#00FFFFFF"
+            android:backgroundTint="#00FF0000"
+            android:contentDescription="@string/adopt"
+            app:srcCompat="@drawable/donate" />
 
         <TextView
             android:id="@+id/tvAdopt"
-            android:layout_width="102dp"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/vOrgInfo"
-            android:layout_alignEnd="@+id/vOrgInfo"
-            android:layout_alignBottom="@+id/vOrgInfo"
+            android:layout_alignStart="@+id/vAdopt"
+            android:layout_alignEnd="@+id/vAdopt"
+            android:layout_alignBottom="@+id/vAdopt"
             android:layout_marginStart="34dp"
-            android:layout_marginEnd="32dp"
+            android:layout_marginEnd="19dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="sans-serif-medium"
-            android:letterSpacing="0.5"
+            android:letterSpacing="0.1"
             android:text="@string/ADOPT"
+            android:textColor="#172129"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvShop"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/vShop"
+            android:layout_alignEnd="@+id/vShop"
+            android:layout_alignBottom="@+id/vShop"
+            android:layout_marginStart="34dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.1"
+            android:text="@string/SHOP"
+            android:textColor="#172129"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvtraAdopt"
+            android:layout_width="115dp"
+            android:layout_height="34dp"
+            android:layout_alignStart="@+id/vShop"
+            android:layout_alignEnd="@+id/vShop"
+            android:layout_alignBottom="@+id/vShop"
+            android:layout_marginStart="29dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="-153dp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.1"
+            android:text="@string/TRACKADOPTION"
+            android:textColor="#172129"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvtraAdopt2"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/vtraOrders"
+            android:layout_alignEnd="@+id/vtraOrders"
+            android:layout_alignBottom="@+id/vtraOrders"
+            android:layout_marginStart="22dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.1"
+            android:text="@string/TRACKORDER"
+            android:textColor="#172129"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="129dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/vMessages"
+            android:layout_alignEnd="@+id/vMessages"
+            android:layout_alignBottom="@+id/vMessages"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:letterSpacing="0.1"
+            android:text="@string/MESSAGES"
             android:textColor="#172129"
             android:textSize="16sp" />
 

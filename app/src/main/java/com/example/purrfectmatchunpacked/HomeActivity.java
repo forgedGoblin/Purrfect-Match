@@ -84,12 +84,12 @@ public class HomeActivity extends AppCompatActivity {
         adoptButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, AdoptActivity.class);
+                Intent intent = new Intent(HomeActivity.this, SelectCatActivity.class);
                 startActivity(intent);
             }
         });
 
-        Button donateButton = findViewById(R.id.donate_button);
+        ImageButton donateButton = findViewById(R.id.donate_button);
         donateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,7 +98,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        Button shopButton = findViewById(R.id.shop_button);
+        ImageButton shopButton = findViewById(R.id.shop_button);
         shopButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,7 +107,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        Button msgButton = findViewById(R.id.messages_button);
+        ImageButton msgButton = findViewById(R.id.messages_button);
         msgButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,7 +116,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        Button trackAdoptButton = findViewById(R.id.traAdopt_button);
+        ImageButton trackAdoptButton = findViewById(R.id.traAdopt_button);
         trackAdoptButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -125,7 +125,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        Button trackOrdersButton = findViewById(R.id.traOrder_button);
+        ImageButton trackOrdersButton = findViewById(R.id.traOrder_button);
         trackOrdersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
