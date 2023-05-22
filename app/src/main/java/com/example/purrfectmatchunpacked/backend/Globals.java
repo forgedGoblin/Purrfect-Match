@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -83,8 +85,8 @@ public class Globals {
     public static String testEmail ="testadmin@gmail.com";
     public static String testPassword = "testadmin";
 
-    public static void showMsg (String msg){
-        Toast.makeText(null, msg, Toast.LENGTH_LONG).show();
+    public static void showMsg (AppCompatActivity instance, String msg){
+        Toast.makeText(instance, msg, Toast.LENGTH_LONG).show();
     }
 
 
@@ -137,7 +139,7 @@ public class Globals {
         prev.startActivity(activity);
     }
 
-    public void delayWhileNotEndLoad(){
+    public static void delayWhileLoading(){
         while (!safeLoad) {}
     }
 

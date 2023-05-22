@@ -10,10 +10,11 @@
     import com.google.android.gms.tasks.Task;
     import com.google.firebase.firestore.QuerySnapshot;
 
+    import java.io.Serializable;
     import java.util.ArrayList;
     import java.util.concurrent.atomic.AtomicBoolean;
 
-    public class Cat {
+    public class Cat implements Serializable {
         public boolean isAdopted;
         public String age;
         public byte[] image;
@@ -21,6 +22,7 @@
         public String name;
         public String sex;
         public String ID;
+        public String extension;
         public String getURL(){
             return "gs://purrfect-match-b4b6d.appspot.com/cats/" + ID;
         }

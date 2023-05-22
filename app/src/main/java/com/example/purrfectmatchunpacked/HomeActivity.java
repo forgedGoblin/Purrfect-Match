@@ -17,6 +17,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.purrfectmatchunpacked.backend.Cat;
 import com.example.purrfectmatchunpacked.backend.Connector;
 import com.example.purrfectmatchunpacked.backend.Globals;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,6 +31,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import org.w3c.dom.Document;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 
 public class HomeActivity extends AppCompatActivity {
@@ -84,8 +86,8 @@ public class HomeActivity extends AppCompatActivity {
         adoptButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, SelectCatActivity.class);
-                startActivity(intent);
+                Globals.load(getThis());
+                getCats();
             }
         });
 
@@ -134,5 +136,36 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    AppCompatActivity getThis () {return this;}
+
+
+    ArrayList<Cat> getCats () {
+
+        ArrayList<Cat> cats = new ArrayList<>();
+        Globals.db.collection("cats").whereEqualTo("isAdopted", false)
+                .get().addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        for (var shard : task.getResult()) {
+                            Cat cat = new Cat();
+                            cat.ID = shard.getId();
+                            cat.name = (String)shard.get("name");
+                            cat.extension = (String)shard.get("extension");
+                            cat.sex = (String)shard.get("sex");
+                            cat.age = (String)shard.get("age");
+                            cat.organization = (String)shard.get("org");
+
+                            cats.add(cat);
+                         //   Globals.showMsg(this, "Getting cat!");
+                        } Globals.endLoad();
+                        Intent intent = new Intent(HomeActivity.this, SelectCatActivity.class);
+                        intent.putExtra("cats", cats);
+                        Globals.startActivityOnFinish(getThis(), intent);
+                    } else {
+                        Globals.showMsg(this,"There was an error when retrieving the cats. Please try again on another time.");
+                    }
+                });
+        return cats;
     }
 }

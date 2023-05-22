@@ -28,21 +28,18 @@ public class AdoptActivity extends AppCompatActivity {
         setContentView(R.layout.activity_adopt);
         TextView name = findViewById(R.id.tvName);
         name.setText(Globals.currentUser.fname);
+        TextView catName = findViewById(R.id.tvCleo);
+        TextView orgName = findViewById(R.id.tvCfITP);
+        TextView gender = findViewById(R.id.tvFemale);
+        TextView age = findViewById(R.id.tv2);
         ImageView cleoView = findViewById(R.id.ivCleo);
-        DocumentReference user = Globals.db.collection("users").document("testadmin@gmail.com");
-        user.get().addOnCompleteListener( v -> {
-            var userDocument = v.getResult();
-            var x = (String)userDocument.get("email");
-            System.out.println(x);
-        }).addOnFailureListener( x -> {
-            System.out.println("Error!");
-        });
-
-
-        var array = Cat.getCats();
-        //cleoView.setImageBitmap(Cat.getCats().get(1).getBitmap());
-   //     var cat = array.get(0);
+        Cat cat = (Cat)getIntent().getExtras().get("cat");
         ImageView menuButton = findViewById(R.id.menuButton);
+        catName.setText(cat.name);
+        orgName.setText(cat.organization);
+        gender.setText(cat.sex);
+        age.setText(cat.age);
+
 
 
         menuButton.setOnClickListener(new View.OnClickListener() {
