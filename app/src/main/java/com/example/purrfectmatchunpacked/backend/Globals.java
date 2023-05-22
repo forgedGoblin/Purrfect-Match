@@ -3,6 +3,7 @@ package com.example.purrfectmatchunpacked.backend;
 import static androidx.core.content.ContextCompat.getSystemService;
 
 import android.app.Activity;
+import com.squareup.picasso.RequestCreator;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;

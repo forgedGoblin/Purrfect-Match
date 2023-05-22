@@ -16,7 +16,7 @@
         android:theme="@style/Theme.PurrfectMatchunpacked"
         tools:targetApi="31">
         <activity
-            android:name=".ChooseCatActivity"
+            android:name=".SelectCatActivity"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity

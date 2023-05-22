@@ -59,7 +59,7 @@ dependencies {
 
     // Firestore
     //  implementation 'com.google.cloud:google-cloud-firestore:2.2.0'
-    implementation 'com.google.auth:google-auth-library-oauth2-http:0.22.0'
+    implementation 'com.google.auth:google-auth-library-oauth2-http:0.22.2'
     implementation 'com.google.firebase:firebase-storage-ktx'
     implementation 'com.squareup.picasso:picasso:2.71828'
 }

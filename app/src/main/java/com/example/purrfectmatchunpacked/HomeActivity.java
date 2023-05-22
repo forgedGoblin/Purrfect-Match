@@ -151,7 +151,7 @@ public class HomeActivity extends AppCompatActivity {
                             cats.add(cat);
                          //   Globals.showMsg(this, "Getting cat!");
                         } Globals.endLoad();
-                        Intent intent = new Intent(HomeActivity.this, ChooseCatActivity.class);
+                        Intent intent = new Intent(HomeActivity.this, SelectCatActivity.class);
                         intent.putExtra("cats", cats);
                         Globals.startActivityOnFinish(getThis(), intent);
                     } else {
