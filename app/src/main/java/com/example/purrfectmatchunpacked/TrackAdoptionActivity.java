@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +18,9 @@ import android.widget.Toast;
 import com.example.purrfectmatchunpacked.backend.Globals;
 
 public class TrackAdoptionActivity extends AppCompatActivity {
+
+    LinearLayout buttonContainer;
+    Button addButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +31,16 @@ public class TrackAdoptionActivity extends AppCompatActivity {
         TextView address = findViewById(R.id.tvAddress);
         address.setText(Globals.getCity(this));
         ImageView menuButton = findViewById(R.id.menuButton);
+
+        buttonContainer = findViewById(R.id.buttonContainer);
+        addButton = findViewById(R.id.addButton);
+
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addButtonToContainer();
+            }
+        });
 
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,5 +76,16 @@ public class TrackAdoptionActivity extends AppCompatActivity {
                 popupMenu.show();
             }
         });
+    }
+    private void addButtonToContainer() {
+        Button newButton = new Button(this);
+        newButton.setText("New Button");
+
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+
+        buttonContainer.addView(newButton, layoutParams);
     }
 }
