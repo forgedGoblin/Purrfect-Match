@@ -8,31 +8,34 @@
 
     <Button
         android:id="@+id/addButton"
-        android:layout_width="125dp"
+        android:layout_width="152dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/vgreenRecDivider"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="147dp"
-        android:layout_marginEnd="139dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="25dp"
         android:backgroundTint="#F1F1F1"
         android:text="@string/add_button"
         android:textColor="@color/black" />
 
     <TextView
-        android:id="@+id/tHome"
+        android:id="@+id/tAnnouncements"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/vgreenRec"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="78dp"
         android:layout_marginEnd="17dp"
+        android:layout_marginBottom="26dp"
         android:text="@string/choose_cat"
+        android:textAlignment="center"
         android:textColor="#F0FFFF"
-        android:textSize="65sp"
+        android:textSize="55sp"
         android:textStyle="bold"
         tools:ignore="TextSizeCheck" />
 

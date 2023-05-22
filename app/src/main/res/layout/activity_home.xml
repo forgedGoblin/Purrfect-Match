@@ -14,16 +14,17 @@
         android:background="@color/primary">
 
         <TextView
-            android:id="@+id/tHome"
-            android:layout_width="235dp"
+            android:id="@+id/tAnnouncements"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="103dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="72dp"
-            android:layout_marginEnd="73dp"
+            android:layout_marginEnd="0dp"
             android:text="@string/home"
+            android:textAlignment="center"
             android:textColor="#F0FFFF"
             android:textSize="70sp"
             android:textStyle="bold"
@@ -79,7 +80,8 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="190dp"
-            android:background="@drawable/rounded_square" />
+            android:background="@drawable/rounded_square"
+            android:textAlignment="center" />
 
         <View
             android:id="@+id/vShop"
@@ -114,17 +116,18 @@
 
         <TextView
             android:id="@+id/tvDonate"
-            android:layout_width="115dp"
+            android:layout_width="125dp"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/vDonate"
             android:layout_alignEnd="@+id/vDonate"
             android:layout_alignBottom="@+id/vDonate"
-            android:layout_marginStart="33dp"
+            android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="sans-serif-medium"
             android:letterSpacing="0.1"
             android:text="@string/DONATE"
+            android:textAlignment="center"
             android:textColor="#172129"
             android:textSize="16sp"
             tools:ignore="TextSizeCheck" />
@@ -280,81 +283,86 @@
 
         <TextView
             android:id="@+id/tvAdopt"
-            android:layout_width="115dp"
+            android:layout_width="128dp"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/vAdopt"
             android:layout_alignEnd="@+id/vAdopt"
             android:layout_alignBottom="@+id/vAdopt"
-            android:layout_marginStart="34dp"
+            android:layout_marginStart="18dp"
             android:layout_marginEnd="19dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="sans-serif-medium"
             android:letterSpacing="0.1"
             android:text="@string/ADOPT"
+            android:textAlignment="center"
             android:textColor="#172129"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvShop"
-            android:layout_width="115dp"
+            android:layout_width="128dp"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/vShop"
             android:layout_alignEnd="@+id/vShop"
             android:layout_alignBottom="@+id/vShop"
-            android:layout_marginStart="34dp"
+            android:layout_marginStart="18dp"
             android:layout_marginEnd="19dp"
             android:layout_marginBottom="12dp"
             android:fontFamily="sans-serif-medium"
             android:letterSpacing="0.1"
             android:text="@string/SHOP"
+            android:textAlignment="center"
             android:textColor="#172129"
             android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvtraAdopt"
-            android:layout_width="115dp"
-            android:layout_height="34dp"
+            android:layout_width="139dp"
+            android:layout_height="wrap_content"
             android:layout_alignStart="@+id/vShop"
             android:layout_alignEnd="@+id/vShop"
             android:layout_alignBottom="@+id/vShop"
-            android:layout_marginStart="29dp"
-            android:layout_marginEnd="21dp"
-            android:layout_marginBottom="-153dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="-144dp"
             android:fontFamily="sans-serif-medium"
             android:letterSpacing="0.1"
             android:text="@string/TRACKADOPTION"
+            android:textAlignment="center"
             android:textColor="#172129"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/tvtraAdopt2"
-            android:layout_width="125dp"
+            android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/vtraOrders"
             android:layout_alignEnd="@+id/vtraOrders"
             android:layout_alignBottom="@+id/vtraOrders"
-            android:layout_marginStart="22dp"
-            android:layout_marginEnd="18dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="13dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="sans-serif-medium"
             android:letterSpacing="0.1"
             android:text="@string/TRACKORDER"
+            android:textAlignment="center"
             android:textColor="#172129"
             android:textSize="14sp" />
 
         <TextView
             android:id="@+id/tvMessage"
-            android:layout_width="129dp"
+            android:layout_width="147dp"
             android:layout_height="wrap_content"
             android:layout_alignStart="@+id/vAnnounce"
             android:layout_alignEnd="@+id/vAnnounce"
             android:layout_alignBottom="@+id/vAnnounce"
-            android:layout_marginStart="17dp"
-            android:layout_marginEnd="19dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="22dp"
             android:fontFamily="sans-serif-medium"
             android:letterSpacing="0.1"
             android:text="ANNOUNCEMENTS"
+            android:textAlignment="center"
             android:textColor="#172129"
             android:textSize="12sp" />
 

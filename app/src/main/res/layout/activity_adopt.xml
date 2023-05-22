@@ -8,16 +8,17 @@
     android:background="@color/primary">
 
     <TextView
-        android:id="@+id/tHome"
-        android:layout_width="235dp"
+        android:id="@+id/tAnnouncements"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="103dp"
+        android:layout_marginStart="0dp"
         android:layout_marginTop="72dp"
-        android:layout_marginEnd="73dp"
+        android:layout_marginEnd="0dp"
         android:text="@string/adoptAct"
+        android:textAlignment="center"
         android:textColor="#F0FFFF"
         android:textSize="70sp"
         android:textStyle="bold"
@@ -173,16 +174,17 @@
 
     <TextView
         android:id="@+id/tvCleo"
-        android:layout_width="109dp"
+        android:layout_width="393dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="158dp"
-        android:layout_marginEnd="144dp"
-        android:layout_marginBottom="475dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="473dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/cleo"
+        android:textAlignment="center"
         android:textColor="#F0FFFF"
         android:textSize="35sp" />
 
@@ -201,82 +203,88 @@
 
     <TextView
         android:id="@+id/tvOrganization"
-        android:layout_width="112dp"
+        android:layout_width="141dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="45dp"
         android:layout_marginBottom="169dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/organization"
+        android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="18sp"
         tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/tvCfITP"
-        android:layout_width="151dp"
+        android:layout_width="179dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="203dp"
-        android:layout_marginBottom="170dp"
+        android:layout_marginStart="186dp"
+        android:layout_marginBottom="169dp"
         android:fontFamily="sans-serif"
         android:text="@string/cats_of_it_park"
+        android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="18sp"
         tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/tvFemale"
-        android:layout_width="84dp"
+        android:layout_width="178dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="236dp"
-        android:layout_marginBottom="103dp"
+        android:layout_marginStart="187dp"
+        android:layout_marginBottom="104dp"
         android:fontFamily="sans-serif"
         android:text="@string/female"
+        android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/tv2"
-        android:layout_width="84dp"
+        android:layout_width="175dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="236dp"
-        android:layout_marginBottom="46dp"
+        android:layout_marginStart="186dp"
+        android:layout_marginBottom="44dp"
         android:fontFamily="sans-serif"
         android:text="@string/_2_years"
+        android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="18sp" />
 
     <TextView
         android:id="@+id/tvGender"
-        android:layout_width="77dp"
+        android:layout_width="143dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="77dp"
+        android:layout_marginStart="43dp"
         android:layout_marginBottom="104dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/gender"
+        android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="18sp"
         tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/tvAge"
-        android:layout_width="55dp"
+        android:layout_width="144dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="89dp"
+        android:layout_marginStart="43dp"
         android:layout_marginBottom="44dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/age"
+        android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="18sp" />
 

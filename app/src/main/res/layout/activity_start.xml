@@ -49,17 +49,18 @@
 
         <TextView
             android:id="@+id/tvcatparent"
-            android:layout_width="249dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/vgreenRec"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="0dp"
             android:layout_marginTop="47dp"
-            android:layout_marginEnd="49dp"
+            android:layout_marginEnd="0dp"
             android:layout_marginBottom="28dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/welcome_to"
+            android:textAlignment="center"
             android:textColor="#F0FFFF"
             android:textSize="34sp"
             tools:ignore="TextSizeCheck" />

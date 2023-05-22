@@ -17,7 +17,7 @@ public class AnnouncementsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_messages);
+        setContentView(R.layout.activity_announcements);
 
         ImageView menuButton = findViewById(R.id.menuButton);
 

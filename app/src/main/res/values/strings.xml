@@ -13,7 +13,6 @@
     <string name="adopt">Adopt</string>
     <string name="track_adoption">Track Adoption</string>
     <string name="donate">Donate</string>
-    <string name="messages">Messages</string>
     <string name="track_orders">Track Orders</string>
     <string name="adoptAct">Adopt</string>
     <string name="donateAct">Donate</string>
@@ -43,4 +42,5 @@
     <string name="TRACKORDER">TRACK ORDER</string>
     <string name="add_button">Add Button</string>
     <string name="choose_cat">Choose Cat</string>
+    <string name="announcements">Announcements</string>
 </resources>
