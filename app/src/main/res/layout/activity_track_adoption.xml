@@ -83,4 +83,40 @@
         android:layout_marginTop="11dp"
         android:background="@drawable/circle_shape" />
 
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="511dp"
+        android:layout_above="@+id/addButton"
+        android:layout_alignTop="@+id/vgreenRec"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="@string/track_adoption">
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/vgreenRecDivider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="131dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#F1F1F1"
+        android:text="@string/add_button"
+        android:textColor="@color/black" />
+
 </RelativeLayout>

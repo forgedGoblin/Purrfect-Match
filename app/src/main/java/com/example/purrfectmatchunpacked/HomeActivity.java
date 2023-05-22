@@ -1,6 +1,5 @@
 package com.example.purrfectmatchunpacked;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,7 +9,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
@@ -18,19 +16,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.purrfectmatchunpacked.backend.Cat;
-import com.example.purrfectmatchunpacked.backend.Connector;
 import com.example.purrfectmatchunpacked.backend.Globals;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import org.w3c.dom.Document;
-
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 
@@ -159,7 +149,7 @@ public class HomeActivity extends AppCompatActivity {
                             cats.add(cat);
                          //   Globals.showMsg(this, "Getting cat!");
                         } Globals.endLoad();
-                        Intent intent = new Intent(HomeActivity.this, SelectCatActivity.class);
+                        Intent intent = new Intent(HomeActivity.this, ChooseCatActivity.class);
                         intent.putExtra("cats", cats);
                         Globals.startActivityOnFinish(getThis(), intent);
                     } else {

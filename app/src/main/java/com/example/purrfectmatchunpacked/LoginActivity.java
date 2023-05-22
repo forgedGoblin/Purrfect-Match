@@ -46,10 +46,12 @@ public class LoginActivity extends AppCompatActivity {
         email = findViewById(R.id.emailLogin);
         password = findViewById(R.id.passwordLogin);
         Globals.testMode = true;
+
         ImageView registerWave = findViewById(R.id.greenWave);
         Resources res = this.getResources();
         int newColor = res.getColor(R.color.secondary);
         registerWave.setColorFilter(newColor, PorterDuff.Mode.SRC_ATOP);
+
         Globals.fireAuth = FirebaseAuth.getInstance();
         Button loginButton = findViewById(R.id.login_button);
 

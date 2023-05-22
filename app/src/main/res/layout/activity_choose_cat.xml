@@ -6,20 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/primary">
 
-    <Button
-        android:id="@+id/addButton"
-        android:layout_width="152dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/vgreenRecDivider"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="131dp"
-        android:layout_marginEnd="128dp"
-        android:layout_marginBottom="25dp"
-        android:backgroundTint="#F1F1F1"
-        android:text="@string/add_button"
-        android:textColor="@color/black" />
-
     <TextView
         android:id="@+id/tAnnouncements"
         android:layout_width="379dp"
@@ -121,5 +107,19 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="11dp"
         android:background="@drawable/circle_shape" />
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/vgreenRecDivider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="131dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#F1F1F1"
+        android:text="@string/add_button"
+        android:textColor="@color/black" />
 
 </RelativeLayout>
