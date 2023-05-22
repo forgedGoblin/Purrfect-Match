@@ -114,7 +114,7 @@
         android:layout_marginBottom="114dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/SHOP"
-        app:srcCompat="@drawable/catRes" />
+        app:srcCompat="@drawable/catres" />
 
     <ImageButton
         android:id="@+id/imageButton9"
@@ -128,7 +128,7 @@
         android:layout_marginBottom="294dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/SHOP"
-        app:srcCompat="@drawable/catfoodBar" />
+        app:srcCompat="@drawable/catfoodbar" />
 
     <ImageButton
         android:id="@+id/imageButton11"
@@ -142,6 +142,6 @@
         android:layout_marginBottom="63dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/SHOP"
-        app:srcCompat="@drawable/catResBar" />
+        app:srcCompat="@drawable/catresbar" />
 
 </RelativeLayout>
