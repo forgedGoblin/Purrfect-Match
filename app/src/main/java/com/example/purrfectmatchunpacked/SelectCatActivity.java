@@ -2,16 +2,13 @@ package com.example.purrfectmatchunpacked;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.example.purrfectmatchunpacked.backend.Cat;
-import com.example.purrfectmatchunpacked.backend.Globals;
 
 import java.util.ArrayList;
 
@@ -20,7 +17,7 @@ public class SelectCatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_cat);
+        setContentView(R.layout.activity_choose_cat);
 
         /* Dynamically add buttons */
         LinearLayout buttonContainer = findViewById(R.id.buttonContainer);
