@@ -28,11 +28,15 @@ public class AdoptActivity extends AppCompatActivity {
         setContentView(R.layout.activity_adopt);
         TextView name = findViewById(R.id.tvName);
         name.setText(Globals.currentUser.fname);
+        TextView address = findViewById(R.id.tvAddress);
+        address.setText(Globals.getCity(this));
         TextView catName = findViewById(R.id.tvCleo);
         TextView orgName = findViewById(R.id.tvCfITP);
         TextView gender = findViewById(R.id.tvFemale);
         TextView age = findViewById(R.id.tv2);
         ImageView cleoView = findViewById(R.id.ivCleo);
+        Globals.currentImage.into(cleoView);
+        Globals.endLoad();
         Cat cat = (Cat)getIntent().getExtras().get("cat");
         ImageView menuButton = findViewById(R.id.menuButton);
         catName.setText(cat.name);

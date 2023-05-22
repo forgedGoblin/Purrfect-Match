@@ -25,6 +25,8 @@ public class TrackOrdersActivity extends AppCompatActivity {
         ImageView menuButton = findViewById(R.id.menuButton);
         TextView name = findViewById(R.id.tvName);
         name.setText(Globals.currentUser.fname);
+        TextView address = findViewById(R.id.tvAddress);
+        address.setText(Globals.getCity(this));
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

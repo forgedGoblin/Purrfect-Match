@@ -152,10 +152,11 @@
 
         <TextView
             android:id="@+id/tvAddress"
+            android:gravity="end"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="22dp"
             android:layout_marginEnd="10dp"
             android:layout_toStartOf="@+id/menuButton"
             android:text="@string/lahug_cebu_city"

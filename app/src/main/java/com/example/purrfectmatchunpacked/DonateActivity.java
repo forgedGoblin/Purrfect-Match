@@ -21,6 +21,8 @@ public class DonateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donate);
+        TextView address = findViewById(R.id.tvAddress);
+        address.setText(Globals.getCity(this));
 
         ImageView menuButton = findViewById(R.id.menuButton);
         TextView name = findViewById(R.id.tvName);

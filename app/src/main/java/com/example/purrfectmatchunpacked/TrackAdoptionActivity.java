@@ -23,6 +23,8 @@ public class TrackAdoptionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_track_adoption);
         TextView name = findViewById(R.id.tvName);
         name.setText(Globals.currentUser.fname);
+        TextView address = findViewById(R.id.tvAddress);
+        address.setText(Globals.getCity(this));
         ImageView menuButton = findViewById(R.id.menuButton);
 
         menuButton.setOnClickListener(new View.OnClickListener() {

@@ -45,6 +45,8 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         user = findViewById(R.id.tvName);
         user.setText(Globals.currentUser.fname);
+        TextView address = findViewById(R.id.tvAddress);
+        address.setText(Globals.getCity(this));
 
         ImageView menuButton = findViewById(R.id.menuButton);
         menuButton.setOnClickListener(new View.OnClickListener() {

@@ -10,7 +10,10 @@ import android.view.SubMenu;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.purrfectmatchunpacked.backend.Globals;
 
 public class AnnouncementsActivity extends AppCompatActivity {
 
@@ -18,6 +21,8 @@ public class AnnouncementsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_announcements);
+        TextView address = findViewById(R.id.tvAddress);
+        address.setText(Globals.getCity(this));
 
         ImageView menuButton = findViewById(R.id.menuButton);
 
