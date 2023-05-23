@@ -91,7 +91,6 @@
             android:textColor="#172129"
             android:textSize="16sp" />
 
-
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

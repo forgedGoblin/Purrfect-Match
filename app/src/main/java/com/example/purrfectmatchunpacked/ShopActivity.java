@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -131,13 +132,13 @@ public class ShopActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.account:
-                                Toast.makeText(ShopActivity.this, "Account has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(ShopActivity.this, AccountActivity.class));
                                 return true;
                             case R.id.wallet:
-                                Toast.makeText(ShopActivity.this, "Wallet has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(ShopActivity.this, WalletActivity.class));
                                 return true;
                             case R.id.settings:
-                                Toast.makeText(ShopActivity.this, "Settings has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(ShopActivity.this, SettingsActivity.class));
                                 return true;
                             default:
                                 return false;

@@ -56,7 +56,7 @@ public class HomeActivity extends AppCompatActivity {
                                 startActivity(new Intent(HomeActivity.this, AccountActivity.class));
                                 return true;
                             case R.id.wallet:
-                                Toast.makeText(HomeActivity.this, "Wallet has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(HomeActivity.this, WalletActivity.class));
                                 return true;
                             case R.id.settings:
                                 startActivity(new Intent(HomeActivity.this, SettingsActivity.class));

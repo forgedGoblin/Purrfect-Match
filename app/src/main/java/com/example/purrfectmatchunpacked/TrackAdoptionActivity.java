@@ -2,6 +2,7 @@ package com.example.purrfectmatchunpacked;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -55,13 +56,13 @@ public class TrackAdoptionActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.account:
-                                Toast.makeText(TrackAdoptionActivity.this, "Account has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(TrackAdoptionActivity.this, AccountActivity.class));
                                 return true;
                             case R.id.wallet:
-                                Toast.makeText(TrackAdoptionActivity.this, "Wallet has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(TrackAdoptionActivity.this, WalletActivity.class));
                                 return true;
                             case R.id.settings:
-                                Toast.makeText(TrackAdoptionActivity.this, "Settings has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(TrackAdoptionActivity.this, SettingsActivity.class));
                                 return true;
                             default:
                                 return false;

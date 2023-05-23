@@ -2,6 +2,7 @@ package com.example.purrfectmatchunpacked;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -39,13 +40,13 @@ public class DonateActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.account:
-                                Toast.makeText(DonateActivity.this, "Account has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(DonateActivity.this, AccountActivity.class));
                                 return true;
                             case R.id.wallet:
-                                Toast.makeText(DonateActivity.this, "Wallet has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(DonateActivity.this, WalletActivity.class));
                                 return true;
                             case R.id.settings:
-                                Toast.makeText(DonateActivity.this, "Settings has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(DonateActivity.this, SettingsActivity.class));
                                 return true;
                             default:
                                 return false;
