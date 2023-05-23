@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         warning.setVisibility(View.INVISIBLE);
         email = findViewById(R.id.emailLogin);
         password = findViewById(R.id.passwordLogin);
-        Globals.testMode = true;
+        Globals.testMode = false;
         ImageView registerWave = findViewById(R.id.greenWave);
         Resources res = this.getResources();
         int newColor = res.getColor(R.color.secondary);

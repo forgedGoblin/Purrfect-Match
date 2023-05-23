@@ -20,6 +20,7 @@ public class AnnouncementsActivity extends AppCompatActivity {
 
     TextView header;
     TextView body;
+    TextView org;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +29,13 @@ public class AnnouncementsActivity extends AppCompatActivity {
         TextView address = findViewById(R.id.tvAddress);
         header = findViewById(R.id.tAnnouncements2);
         body = findViewById(R.id.tAnnouncements3);
+        org = findViewById(R.id.tAnnouncements4);
         address.setText(Globals.getCity(this));
         Bundle bundle = getIntent().getExtras();
         var announcement = (Announcement)bundle.get("announcement");
         header.setText(announcement.body);
         body.setText(announcement.header);
+        org.setText(announcement.organization);
 
         ImageView menuButton = findViewById(R.id.menuButton);
 

@@ -2,6 +2,8 @@ package com.example.purrfectmatchunpacked;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -11,6 +13,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -20,7 +23,13 @@ import com.example.purrfectmatchunpacked.backend.Cat;
 import com.example.purrfectmatchunpacked.backend.Globals;
 import com.google.firebase.firestore.DocumentReference;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Locale;
+
 public class AdoptActivity extends AppCompatActivity {
+    Button adoptButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +37,7 @@ public class AdoptActivity extends AppCompatActivity {
         setContentView(R.layout.activity_adopt);
         TextView name = findViewById(R.id.tvName);
         name.setText(Globals.currentUser.fname);
+        adoptButton = findViewById(R.id.button);
         TextView address = findViewById(R.id.tvAddress);
         address.setText(Globals.getCity(this));
         TextView catName = findViewById(R.id.tvCleo);
@@ -43,6 +53,7 @@ public class AdoptActivity extends AppCompatActivity {
         orgName.setText(cat.organization);
         gender.setText(cat.sex);
         age.setText(cat.age);
+
 
 
 
@@ -80,5 +91,48 @@ public class AdoptActivity extends AppCompatActivity {
                 popupMenu.show();
             }
         });
+
+         adoptButton.setOnClickListener( l -> {
+             DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                 @Override
+                 public void onClick(DialogInterface dialog, int which) {
+                     switch (which) {
+                         case DialogInterface.BUTTON_POSITIVE:
+                             // generates ID from FireBase
+                             String id = Globals.db.collection("adopt_request").document().getId();
+                             HashMap<String, Object> data = new HashMap<>();
+                             data.put("email", Globals.currentUser.email);
+                             data.put("time", new SimpleDateFormat("yyyy/MM/dd HH:mm:ss", Locale.getDefault()).format(new Date()));
+                             data.put("fname", Globals.currentUser.fname);
+                             data.put("lname", Globals.currentUser.lname);
+                             data.put("status", "pending organization confirmation");
+                             data.put("organization", cat.organization);
+                             data.put("cat", cat.name);
+                             // adds orders to the database
+                             Globals.db.collection("adopt_request").document(id).set(data).addOnSuccessListener(suc -> {
+                                 Globals.db.collection("cats").document(cat.ID).update("isAdopted", true);
+                                 Toast.makeText(getThis(), "Cat adoption request sent!\nPlease check your adoptions.", Toast.LENGTH_SHORT).show();
+                             }).addOnFailureListener(er -> {
+                                 Toast.makeText(getThis(), "Adoption request failed. Server issue.", Toast.LENGTH_SHORT).show();
+                             });
+                             break;
+                         case DialogInterface.BUTTON_NEGATIVE:
+
+                         case DialogInterface.BUTTON_NEUTRAL:
+                             Toast.makeText(getThis(), "Cat adoption cancelled.", Toast.LENGTH_SHORT).show();
+                             break;
+                     }
+                 }
+             };
+
+             AlertDialog.Builder builder = new AlertDialog.Builder(this);
+             builder.setMessage("Confirm cat adoption?").setPositiveButton("Yes", dialogClickListener)
+                     .setNegativeButton("No", dialogClickListener).show();
+         });
+
     }
+        public AppCompatActivity getThis(){
+            return this;
+        }
+
 }
