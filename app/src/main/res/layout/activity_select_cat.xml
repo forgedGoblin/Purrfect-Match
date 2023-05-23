@@ -21,7 +21,7 @@
         android:textColor="@color/black" />
 
     <TextView
-        android:id="@+id/tAnnouncements"
+        android:id="@+id/tSettings"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/vgreenRec"

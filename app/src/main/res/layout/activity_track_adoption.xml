@@ -7,7 +7,7 @@
     android:background="@color/primary">
 
     <TextView
-        android:id="@+id/tAnnouncements"
+        android:id="@+id/tSettings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
