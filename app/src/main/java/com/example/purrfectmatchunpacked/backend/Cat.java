@@ -23,6 +23,7 @@
         public String sex;
         public String ID;
         public String extension;
+
         public String getURL(){
             return "gs://purrfect-match-b4b6d.appspot.com/cats/" + ID;
         }
