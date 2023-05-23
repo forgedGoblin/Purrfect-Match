@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.example.purrfectmatchunpacked.backend.Announcement;
 import com.example.purrfectmatchunpacked.backend.Cat;
 import com.example.purrfectmatchunpacked.backend.Globals;
+import com.example.purrfectmatchunpacked.backend.Orders;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -143,8 +144,23 @@ public class HomeActivity extends AppCompatActivity {
         trackOrdersButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, TrackOrdersActivity.class);
-                startActivity(intent);
+                Globals.load(getThis());
+                ArrayList<Orders> orders = new ArrayList<>();
+                Globals.db.collection("orders").whereEqualTo("user", Globals.currentUser.email).get().addOnSuccessListener(
+                        col -> {
+                           for (var i : col) {
+                                Orders order = new Orders(i.get("user").toString(), i.get("fname").toString(), i.get("lname").toString(), i.get("time").toString(), i.get("status").toString(), i.get("type").toString());
+                                orders.add(order);
+                           }
+                            Intent intent = new Intent(HomeActivity.this, TrackOrdersActivity.class);
+                            intent.putExtra("orders", orders);
+                            startActivity(intent);
+                        }
+                ).addOnFailureListener( v -> {
+                    Globals.endLoad();
+                    Toast.makeText(HomeActivity.this, "Failed to get orders", Toast.LENGTH_SHORT).show();
+                });
+
             }
         });
 
