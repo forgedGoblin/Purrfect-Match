@@ -57,13 +57,13 @@ public class AdoptActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.account:
-                                Toast.makeText(AdoptActivity.this, "Account has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(AdoptActivity.this, AccountActivity.class));
                                 return true;
                             case R.id.wallet:
-                                Toast.makeText(AdoptActivity.this, "Wallet has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(AdoptActivity.this, WalletActivity.class));
                                 return true;
                             case R.id.settings:
-                                Toast.makeText(AdoptActivity.this, "Settings has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(AdoptActivity.this, SettingsActivity.class));
                                 return true;
                             default:
                                 return false;

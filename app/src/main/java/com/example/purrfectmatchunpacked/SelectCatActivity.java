@@ -7,12 +7,16 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import com.example.purrfectmatchunpacked.backend.Cat;
@@ -30,6 +34,42 @@ public class SelectCatActivity extends AppCompatActivity {
         TextView name = findViewById(R.id.tvName);
         name.setText(Globals.currentUser.fname);
         var nameNow = Globals.currentUser.fname;
+
+        ImageView menuButton = findViewById(R.id.menuButton);
+        menuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu popupMenu = new PopupMenu(SelectCatActivity.this, view);
+                popupMenu.getMenuInflater().inflate(R.menu.popup_menu, popupMenu.getMenu());
+
+                popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.account:
+                                startActivity(new Intent(SelectCatActivity.this, AccountActivity.class));
+                                return true;
+                            case R.id.wallet:
+                                startActivity(new Intent(SelectCatActivity.this, WalletActivity.class));
+                                return true;
+                            case R.id.settings:
+                                startActivity(new Intent(SelectCatActivity.this, SettingsActivity.class));
+                                return true;
+                            default:
+                                return false;
+                        }
+                    }
+                });
+
+                if (popupMenu.getMenu().getItem(0).hasSubMenu()) {
+                    SubMenu subMenu = popupMenu.getMenu().getItem(0).getSubMenu();
+                    if (subMenu != null && subMenu.getItem() != null) {
+                        subMenu.getItem().getIcon().setColorFilter(Color.parseColor("#F0FFFF"), PorterDuff.Mode.SRC_ATOP);
+                    }
+                }
+                popupMenu.show();
+            }
+        });
 
         /* Dynamically add buttons */
         LinearLayout buttonContainer = findViewById(R.id.buttonContainer);
