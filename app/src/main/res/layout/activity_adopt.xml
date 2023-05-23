@@ -15,12 +15,12 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="63dp"
         android:layout_marginEnd="0dp"
         android:text="@string/adoptAct"
         android:textAlignment="center"
         android:textColor="#F0FFFF"
-        android:textSize="70sp"
+        android:textSize="60sp"
         android:textStyle="bold"
         tools:ignore="TextSizeCheck" />
 
@@ -40,10 +40,11 @@
     <View
         android:id="@+id/vgreenRec"
         android:layout_width="match_parent"
-        android:layout_height="540dp"
+        android:layout_height="588dp"
         android:layout_above="@id/vgreenRecDivider"
         android:layout_marginBottom="0dp"
         android:background="@drawable/rounded_rectangle" />
+
 
     <View
         android:id="@+id/vGenderInfoGray3"
@@ -52,23 +53,22 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="155dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="157dp"
+        android:layout_marginStart="157dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="220dp"
         android:background="@drawable/rounded_box_adopt_gray" />
 
     <View
         android:id="@+id/vOrgInfo"
         android:layout_width="143dp"
         android:layout_height="48dp"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentStart="false"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="44dp"
-        android:layout_marginEnd="224dp"
-        android:layout_marginBottom="157dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="223dp"
+        android:layout_marginBottom="220dp"
         android:background="@drawable/rounded_box_adopt_white" />
-
 
     <View
         android:id="@+id/vGenderInfoGray2"
@@ -77,9 +77,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="155dp"
-        android:layout_marginEnd="47dp"
-        android:layout_marginBottom="91dp"
+        android:layout_marginStart="157dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="163dp"
         android:background="@drawable/rounded_box_adopt_gray" />
 
     <View
@@ -89,21 +89,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="224dp"
-        android:layout_marginBottom="91dp"
-        android:background="@drawable/rounded_box_adopt_white" />
-
-    <View
-        android:id="@+id/vGenderInfo"
-        android:layout_width="166dp"
-        android:layout_height="48dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="202dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="222dp"
+        android:layout_marginBottom="163dp"
         android:background="@drawable/rounded_box_adopt_white" />
 
     <View
@@ -113,9 +101,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="153dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="102dp"
         android:background="@drawable/rounded_box_adopt_gray" />
 
     <View
@@ -125,9 +113,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="224dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="222dp"
+        android:layout_marginBottom="102dp"
         android:background="@drawable/rounded_box_adopt_white" />
 
     <View
@@ -183,7 +171,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="473dp"
+        android:layout_marginBottom="525dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/cleo"
         android:textAlignment="center"
@@ -197,9 +185,9 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="89dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginBottom="230dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="283dp"
         android:contentDescription="@string/todo"
         app:srcCompat="@drawable/cleoborderradius" />
 
@@ -207,10 +195,10 @@
         android:id="@+id/tvOrganization"
         android:layout_width="141dp"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentStart="false"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="45dp"
-        android:layout_marginBottom="169dp"
+        android:layout_marginBottom="233dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/organization"
         android:textAlignment="center"
@@ -224,8 +212,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="186dp"
-        android:layout_marginBottom="169dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginBottom="233dp"
         android:fontFamily="sans-serif"
         android:text="@string/cats_of_it_park"
         android:textAlignment="center"
@@ -239,24 +227,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="187dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginStart="189dp"
+        android:layout_marginBottom="177dp"
         android:fontFamily="sans-serif"
         android:text="@string/female"
-        android:textAlignment="center"
-        android:textColor="@color/blue"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/tv2"
-        android:layout_width="175dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="186dp"
-        android:layout_marginBottom="44dp"
-        android:fontFamily="sans-serif"
-        android:text="@string/_2_years"
         android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="18sp" />
@@ -267,8 +241,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="177dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/gender"
         android:textAlignment="center"
@@ -277,17 +251,46 @@
         tools:ignore="TextSizeCheck" />
 
     <TextView
+        android:id="@+id/tv2"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="188dp"
+        android:layout_marginBottom="115dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/_2_years"
+        android:textAlignment="center"
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
+
+    <TextView
         android:id="@+id/tvAge"
         android:layout_width="144dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginBottom="115dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/age"
         android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="61dp"
+        android:layout_above="@+id/vgreenRecDivider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="33dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="ADOPT"
+        android:textColor="@color/blue"
+        android:textSize="24sp" />
 
 </RelativeLayout>
