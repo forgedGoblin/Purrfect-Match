@@ -19,7 +19,7 @@
         android:layout_marginEnd="0dp"
         android:text="@string/donateAct"
         android:textAlignment="center"
-        android:textColor="#F0FFFF"
+        android:textColor="@color/white"
         android:textSize="65sp"
         android:textStyle="bold"
         tools:ignore="TextSizeCheck" />
@@ -34,7 +34,8 @@
         android:layout_marginEnd="25dp"
         android:background="@null"
         android:contentDescription="@string/todo1"
-        android:src="@drawable/ic_menu" />
+        android:src="@drawable/ic_menu"
+        tools:ignore="ImageContrastCheck" />
 
     <View
         android:id="@+id/vgreenRec"
@@ -58,20 +59,20 @@
         android:layout_marginTop="32dp"
         android:layout_toEndOf="@+id/circle_view"
         android:text="@string/rufelle"
-        android:textColor="#F0FFFF"
+        android:textColor="@color/white"
         android:textSize="15sp" />
 
     <TextView
         android:id="@+id/tvAddress"
-        android:gravity="end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="13dp"
         android:layout_toStartOf="@+id/menuButton"
+        android:gravity="end"
         android:text="@string/lahug_cebu_city"
-        android:textColor="#F0FFFF"
+        android:textColor="@color/white"
         android:textSize="15sp"
         tools:ignore="RelativeOverlap" />
 
@@ -83,7 +84,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="11dp"
-        android:background="@drawable/circle_shape" />
+        android:background="@drawable/account_circle" />
 
     <ImageButton
         android:id="@+id/imageButton"

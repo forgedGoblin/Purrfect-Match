@@ -16,6 +16,9 @@
         android:theme="@style/Theme.PurrfectMatchunpacked"
         tools:targetApi="31">
         <activity
+            android:name=".AccountActivity"
+            android:exported="false" />
+        <activity
             android:name=".SettingsActivity"
             android:exported="false" />
         <activity

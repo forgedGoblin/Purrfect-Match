@@ -121,6 +121,6 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="10dp"
         android:layout_marginTop="11dp"
-        android:background="@drawable/circle_shape" />
+        android:background="@drawable/account_circle" />
 
 </RelativeLayout>
