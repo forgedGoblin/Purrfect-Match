@@ -44,4 +44,8 @@
     <string name="choose_cat">Choose Cat</string>
     <string name="announcements">Announcements</string>
     <string name="adoptbtn">ADOPT</string>
+    <string name="just_a_circle">just_a_circle</string>
+    <string name="_1_000_000_00">₱‎1,000,000.00</string>
+    <string name="your_wallet">Your Wallet</string>
+    <string name="transactions">Transactions</string>
 </resources>

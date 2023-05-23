@@ -7,7 +7,7 @@
     android:background="@color/primary">
 
     <TextView
-        android:id="@+id/tSettings"
+        android:id="@+id/tfMoney"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"

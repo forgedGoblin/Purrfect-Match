@@ -52,13 +52,13 @@ public class HomeActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.account:
-                                startActivity(new Intent(HomeActivity.this, RegisterActivity.class));
+                                startActivity(new Intent(HomeActivity.this, AccountActivity.class));
                                 return true;
                             case R.id.wallet:
                                 Toast.makeText(HomeActivity.this, "Wallet has been pressed", Toast.LENGTH_SHORT).show();
                                 return true;
                             case R.id.settings:
-                                Toast.makeText(HomeActivity.this, "Settings has been pressed", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(HomeActivity.this, SettingsActivity.class));
                                 return true;
                             default:
                                 return false;

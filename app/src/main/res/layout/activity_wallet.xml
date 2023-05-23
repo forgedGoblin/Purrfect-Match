@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary">
+    android:background="@color/primary"
+    android:textAlignment="center">
 
     <TextView
         android:id="@+id/tfMoney"
@@ -14,13 +14,31 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="0dp"
-        android:text="@string/shop"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="-2dp"
+        android:text="@string/_1_000_000_00"
         android:textAlignment="center"
         android:textColor="#F0FFFF"
-        android:textSize="65sp"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/tfWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="79dp"
+        android:layout_marginEnd="-2dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="@string/your_wallet"
+        android:textAlignment="center"
+        android:textColor="#F0FFFF"
+        android:textSize="20sp"
         android:textStyle="bold"
         tools:ignore="TextSizeCheck" />
 
@@ -41,14 +59,13 @@
         android:layout_width="match_parent"
         android:layout_height="540dp"
         android:layout_above="@id/vgreenRecDivider"
-        android:layout_marginBottom="-1dp"
         android:background="@drawable/rounded_rectangle" />
 
     <View
         android:id="@+id/vgreenRecDivider"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentBottom="true" />
 
     <TextView
         android:id="@+id/tvName"
@@ -86,64 +103,77 @@
         android:layout_marginTop="11dp"
         android:background="@drawable/account_circle" />
 
-    <ImageButton
-        android:id="@+id/imageButton7"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/menu"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="wrap_content"
-        android:layout_height="144dp"
+        android:layout_height="61dp"
         android:layout_above="@+id/vgreenRecDivider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="218dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="452dp"
+        android:backgroundTint="#00FFFFFF"
+        android:hint="Payment Methods">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:text="Credit Card"
+            android:textFilterEnabled="false" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvTransact"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/vgreenRecDivider"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="390dp"
+        android:text="@string/transactions"
+        android:textColor="#2E2020"
+        android:textSize="24sp" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="275dp"
+        android:layout_above="@+id/addButton"
         android:layout_alignTop="@+id/vgreenRec"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="346dp"
-        android:backgroundTint="#00FFFFFF"
-        android:contentDescription="@string/SHOP"
-        app:srcCompat="@drawable/catfood" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="167dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="@string/track_orders">
 
-    <ImageButton
-        android:id="@+id/imageButton10"
-        android:layout_width="wrap_content"
-        android:layout_height="144dp"
-        android:layout_above="@+id/vgreenRecDivider"
-        android:layout_alignTop="@+id/vgreenRec"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="281dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="114dp"
-        android:backgroundTint="#00FFFFFF"
-        android:contentDescription="@string/SHOP"
-        app:srcCompat="@drawable/catres" />
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
 
-    <ImageButton
-        android:id="@+id/imageButton9"
-        android:layout_width="wrap_content"
-        android:layout_height="53dp"
+    </ScrollView>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/vgreenRecDivider"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="294dp"
-        android:backgroundTint="#00FFFFFF"
-        android:contentDescription="@string/SHOP"
-        app:srcCompat="@drawable/catfoodbar" />
-
-    <ImageButton
-        android:id="@+id/imageButton11"
-        android:layout_width="wrap_content"
-        android:layout_height="53dp"
-        android:layout_above="@+id/vgreenRecDivider"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="63dp"
-        android:backgroundTint="#00FFFFFF"
-        android:contentDescription="@string/SHOP"
-        app:srcCompat="@drawable/catresbar" />
-
+        android:layout_marginStart="131dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="25dp"
+        android:backgroundTint="#F1F1F1"
+        android:text="@string/add_button"
+        android:textColor="@color/black" />
 </RelativeLayout>
