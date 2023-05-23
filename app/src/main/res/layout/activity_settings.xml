@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:textAlignment="center">
+
+    <TextView
+        android:id="@+id/tSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="1dp"
+        android:text="@string/settings"
+        android:textAlignment="center"
+        android:textColor="#F0FFFF"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/tSettingsTagline"
+        android:layout_width="wrap_content"
+        android:layout_height="34dp"
+        android:layout_above="@+id/vgreenRec"
+        android:layout_below="@+id/tSettings"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-3dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="80dp"
+        android:fontFamily="sans-serif-thin"
+        android:text="Configure your app's options"
+        android:textAlignment="center"
+        android:textColor="#F0FFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="TextSizeCheck" />
+
+
+    <View
+        android:id="@+id/vgreenRec"
+        android:layout_width="match_parent"
+        android:layout_height="521dp"
+        android:layout_above="@id/vgreenRecDivider"
+        android:layout_marginBottom="2dp"
+        android:background="@drawable/settings_rectangle_back" />
+
+    <View
+        android:id="@+id/vOrgInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="461dp"
+        android:layout_below="@+id/tSettings"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="150dp"
+        android:background="@drawable/rounded_rectangle_allsides" />
+
+    <View
+        android:id="@+id/vOrgInfo2"
+        android:layout_width="wrap_content"
+        android:layout_height="72dp"
+        android:layout_below="@+id/tSettings"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="507dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="58dp"
+        android:background="@drawable/rounded_rectangle_allsides" />
+
+    <View
+        android:id="@+id/vgreenRecDivider"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/tvLoginSecurity"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="385dp"
+        android:text="Login Credentials"
+        android:textColor="#8D5652"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvLoginSecurity3"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginBottom="159dp"
+        android:text="Data and Permissions"
+        android:textColor="#8D5652"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvLoginSecurity2"
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo2"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo2"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="17dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Logout"
+        android:textAlignment="center"
+        android:textColor="#EC0909"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/tvUPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="336dp"
+        android:text="User Profile Settings"
+        android:textColor="#2E2020"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tvNotifications"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="273dp"
+        android:text="Notification Preferences"
+        android:textColor="#2E2020"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tvUPS3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="189dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="209dp"
+        android:text="Help and Support"
+        android:textColor="#2E2020"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tvUPS6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="100dp"
+        android:text="Location"
+        android:textColor="#2E2020"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/tvUPS7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="366dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="35dp"
+        android:text="Toaster"
+        android:textColor="#2E2020"
+        android:textSize="22sp" />
+
+</RelativeLayout>
