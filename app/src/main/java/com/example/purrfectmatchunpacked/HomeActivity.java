@@ -16,6 +16,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.purrfectmatchunpacked.backend.Adoption;
 import com.example.purrfectmatchunpacked.backend.Announcement;
 import com.example.purrfectmatchunpacked.backend.Cat;
 import com.example.purrfectmatchunpacked.backend.Globals;
@@ -23,6 +24,8 @@ import com.example.purrfectmatchunpacked.backend.Orders;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import org.checkerframework.checker.units.qual.A;
 
 import java.util.ArrayList;
 
@@ -135,8 +138,29 @@ public class HomeActivity extends AppCompatActivity {
         trackAdoptButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, TrackAdoptionActivity.class);
-                startActivity(intent);
+                Globals.load(getThis());
+                ArrayList<Adoption> adoptions = new ArrayList<>();
+                Globals.db.collection("adopt_request").whereEqualTo("email", Globals.currentUser.email).get().addOnSuccessListener(
+                        col -> {
+                            for (var i : col) {
+                                Adoption adopt = new Adoption();
+                                adopt.email = i.get("email").toString();
+                                adopt.fname = i.get("fname").toString();
+                                adopt.lname = i.get("lname").toString();
+                                adopt.cat = i.get("cat").toString();
+                                adopt.status = i.get("status").toString();
+                                adopt.organization = i.get("organization").toString();
+                                adopt.time = i.get("time").toString();
+                                adoptions.add(adopt);
+                            }
+                            Intent intent = new Intent(HomeActivity.this, TrackAdoptionActivity.class);
+                            intent.putExtra("adoptions", adoptions);
+                            startActivity(intent);
+                        }
+                ).addOnFailureListener( v -> {
+                    Globals.endLoad();
+                    Toast.makeText(HomeActivity.this, "Failed to get adoptions", Toast.LENGTH_SHORT).show();
+                });
             }
         });
 

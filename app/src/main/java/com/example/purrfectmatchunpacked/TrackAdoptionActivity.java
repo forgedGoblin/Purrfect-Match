@@ -2,6 +2,7 @@ package com.example.purrfectmatchunpacked;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -16,7 +17,11 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.purrfectmatchunpacked.backend.Adoption;
 import com.example.purrfectmatchunpacked.backend.Globals;
+import com.example.purrfectmatchunpacked.backend.Orders;
+
+import java.util.ArrayList;
 
 public class TrackAdoptionActivity extends AppCompatActivity {
 
@@ -44,6 +49,7 @@ public class TrackAdoptionActivity extends AppCompatActivity {
                 addButtonToContainer();
             }
         });
+        addButton.setVisibility(View.INVISIBLE);
 
         menuButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +85,31 @@ public class TrackAdoptionActivity extends AppCompatActivity {
                 popupMenu.show();
             }
         });
+
+        Bundle extra = getIntent().getExtras();
+        var orders = (ArrayList<Adoption>)extra.get("adoptions");
+        for (var order : orders){
+            Button dynamicButton = new Button(this);
+            dynamicButton.setText(order.cat);
+            dynamicButton.setOnClickListener( listen -> {
+                new AlertDialog.Builder(this)
+                        .setTitle("Adoption request for " + order.cat)
+                        .setMessage("Requested by: " + order.fname + " " + order.lname + "\n" +
+                                "Requested on: " + order.time + "\n" +
+                                "Requested from organization: " + order.organization + "\n" +
+                                "Request status: " + order.status).show();
+            });
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            );
+            layoutParams.width = 1000;  // Set the desired width in pixels
+            layoutParams.height = 200; // Set the desired height in pixels
+            dynamicButton.setLayoutParams(layoutParams);
+
+            // Add the button to the container layout
+            buttonContainer.addView(dynamicButton);
+        } Globals.endLoad();
     }
     private void addButtonToContainer() {
         Button newButton = new Button(this);
