@@ -40,6 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="540dp"
         android:layout_above="@id/vgreenRecDivider"
+        android:layout_marginBottom="-118dp"
         android:background="@drawable/rounded_rectangle" />
 
     <View
@@ -100,47 +101,28 @@
         android:text="Header like H1"
         android:textAlignment="center"
         android:textColor="#F0FFFF"
-        android:textSize="27sp"
+        android:textSize="23sp"
         android:textStyle="bold"
         tools:ignore="TextSizeCheck" />
 
     <TextView
         android:id="@+id/tAnnouncements3"
-        android:layout_width="wrap_content"
-        android:layout_height="373dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_above="@+id/vgreenRecDivider"
+        android:layout_alignTop="@+id/vgreenRec"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="288dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="70dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="179dp"
         android:fontFamily="sans-serif-thin"
+        android:gravity="top|start"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textColor="#F0FFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:ignore="TextSizeCheck" />
-
-    <TextView
-        android:id="@+id/tAnnouncements"
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        android:layout_above="@+id/vgreenRecDivider"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="670dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="sans-serif-thin"
-        android:text="Announcement by ..."
-        android:textAlignment="center"
-        android:textColor="#F0FFFF"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         tools:ignore="TextSizeCheck" />
 

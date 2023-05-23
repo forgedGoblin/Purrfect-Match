@@ -13,16 +13,26 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.purrfectmatchunpacked.backend.Announcement;
 import com.example.purrfectmatchunpacked.backend.Globals;
 
 public class AnnouncementsActivity extends AppCompatActivity {
 
+    TextView header;
+    TextView body;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Globals.endLoad();
         setContentView(R.layout.activity_announcements);
         TextView address = findViewById(R.id.tvAddress);
+        header = findViewById(R.id.tAnnouncements2);
+        body = findViewById(R.id.tAnnouncements3);
         address.setText(Globals.getCity(this));
+        Bundle bundle = getIntent().getExtras();
+        var announcement = (Announcement)bundle.get("announcement");
+        header.setText(announcement.body);
+        body.setText(announcement.header);
 
         ImageView menuButton = findViewById(R.id.menuButton);
 

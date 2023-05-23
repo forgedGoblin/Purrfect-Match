@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.purrfectmatchunpacked.backend.Announcement;
 import com.example.purrfectmatchunpacked.backend.Cat;
 import com.example.purrfectmatchunpacked.backend.Globals;
 import com.google.firebase.auth.FirebaseAuth;
@@ -105,8 +107,26 @@ public class HomeActivity extends AppCompatActivity {
         announceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, AnnouncementsActivity.class);
-                startActivity(intent);
+                Globals.load(getThis());
+                // get the latest document in this collection
+                Globals.db.collection("announcements").orderBy("time").limitToLast(1).get()
+                        .addOnSuccessListener( v -> {
+
+                            for (var shard : v) {
+                                var title = (String)shard.get("body");
+                                var body = (String)shard.get("title");
+                                var org = (String)shard.get("organization");
+                                var announcement = new Announcement(title, body, org);
+                                Intent intent = new Intent(HomeActivity.this, AnnouncementsActivity.class);
+                                intent.putExtra("announcement", announcement);
+                                startActivity(intent);
+                                break;
+                            }
+                        }).addOnFailureListener( v -> {
+                            Globals.endLoad();
+                            Toast.makeText(HomeActivity.this, "Failed to get announcements", Toast.LENGTH_SHORT).show();
+                        });
+
             }
         });
 
