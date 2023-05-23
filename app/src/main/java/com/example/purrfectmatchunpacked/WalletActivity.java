@@ -37,6 +37,9 @@ public class WalletActivity extends AppCompatActivity {
         AutoCompleteTextView autoCompleteTextView = findViewById(R.id.autoCompleteTextView);
         autoCompleteTextView.setText("Credit Card");
         autoCompleteTextView.setAdapter(adapter);
+
+
+        addButtonToContainer();
     }
 
     private void addButtonToContainer() {
