@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.purrfectmatchunpacked.backend.Globals;
+import com.example.purrfectmatchunpacked.backend.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseNetworkException;
@@ -111,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         user.get().addOnSuccessListener(userDocument -> {
-            Globals.initUser((String)userDocument.get("email"),(String)userDocument.get("fname"), (String)userDocument.get("lname"));
+            Globals.initUser((String)userDocument.getId(),(String)userDocument.get("fname"), (String)userDocument.get("lname"));
             warning.setVisibility(View.INVISIBLE);
             Globals.endLoad();
             Toast.makeText(LoginActivity.this, "Login success!", Toast.LENGTH_LONG).show();
