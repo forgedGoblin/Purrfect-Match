@@ -3,7 +3,6 @@ package com.example.purrfectmatchunpacked;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.PorterDuff;
@@ -47,9 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         warning.setVisibility(View.INVISIBLE);
         email = findViewById(R.id.emailLogin);
         password = findViewById(R.id.passwordLogin);
-
-        Globals.testMode = true;
-
+        Globals.testMode = false;
         ImageView registerWave = findViewById(R.id.greenWave);
         Resources res = this.getResources();
         int newColor = res.getColor(R.color.secondary);
@@ -97,6 +94,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     });
         });
+
 
         Button registerButton = findViewById(R.id.register_button);
         registerButton.setOnClickListener(view -> {
