@@ -349,6 +349,7 @@
         android:layout_marginBottom="20dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/settings"
+        android:minWidth="48dp"
         app:srcCompat="@drawable/heart" />
 
     <ImageButton
@@ -363,7 +364,8 @@
         android:layout_marginBottom="20dp"
         android:backgroundTint="#00FFFFFF"
         android:contentDescription="@string/settings"
-        app:srcCompat="@drawable/heart" />
+        app:srcCompat="@drawable/heart"
+        tools:ignore="TouchTargetSizeCheck" />
 
 
 </RelativeLayout>
