@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
@@ -120,7 +121,7 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/tvLoginSecurity2"
+        android:id="@+id/tvLogout"
         android:layout_width="365dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/vOrgInfo"
@@ -170,7 +171,7 @@
         android:textSize="22sp" />
 
     <TextView
-        android:id="@+id/tvUPS3"
+        android:id="@+id/tvHelp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/vOrgInfo"
@@ -186,7 +187,7 @@
         android:textSize="22sp" />
 
     <TextView
-        android:id="@+id/tvUPS6"
+        android:id="@+id/tvLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/vOrgInfo"
@@ -202,19 +203,167 @@
         android:textSize="22sp" />
 
     <TextView
-        android:id="@+id/tvUPS7"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvAdvices"
+        android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/vOrgInfo"
         android:layout_alignTop="@+id/vOrgInfo"
         android:layout_alignEnd="@+id/vOrgInfo"
         android:layout_alignBottom="@+id/vOrgInfo"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="2dp"
         android:layout_marginTop="366dp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="35dp"
-        android:text="Toaster"
+        android:text="Feeling sad? Press me!"
+        android:textAlignment="center"
         android:textColor="#2E2020"
         android:textSize="22sp" />
+
+    <ImageButton
+        android:id="@+id/imgbtnAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="310dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="330dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/account"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:srcCompat="@drawable/backbutton"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/imgbtnNotifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="308dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="265dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/settings"
+        android:minHeight="48dp"
+        app:srcCompat="@drawable/backbutton" />
+
+    <ImageButton
+        android:id="@+id/imgbtnHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="307dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="203dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/settings"
+        android:minHeight="48dp"
+        app:srcCompat="@drawable/backbutton" />
+
+    <ImageButton
+        android:id="@+id/imgbtnLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="306dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="92dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/settings"
+        android:minHeight="48dp"
+        app:srcCompat="@drawable/backbutton" />
+
+    <ImageButton
+        android:id="@+id/imgbtnUPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="324dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/settings"
+        app:srcCompat="@drawable/account" />
+
+    <ImageButton
+        android:id="@+id/imgbtnNotif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="112dp"
+        android:layout_marginBottom="260dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/settings"
+        app:srcCompat="@drawable/notifications" />
+
+    <ImageButton
+        android:id="@+id/imgbtnSupport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="177dp"
+        android:layout_marginBottom="195dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/settings"
+        app:srcCompat="@drawable/help" />
+
+    <ImageButton
+        android:id="@+id/imgbtnLoc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="284dp"
+        android:layout_marginBottom="88dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/settings"
+        app:srcCompat="@drawable/location" />
+
+    <ImageButton
+        android:id="@+id/imgbtnHeartLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/vOrgInfo"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="351dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/settings"
+        app:srcCompat="@drawable/heart" />
+
+    <ImageButton
+        android:id="@+id/imgbtnHeartRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/vOrgInfo"
+        android:layout_alignEnd="@+id/vOrgInfo"
+        android:layout_alignBottom="@+id/vOrgInfo"
+        android:layout_marginTop="351dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="@string/settings"
+        app:srcCompat="@drawable/heart" />
+
 
 </RelativeLayout>
