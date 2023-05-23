@@ -17,7 +17,6 @@ public class WalletActivity extends AppCompatActivity {
     LinearLayout buttonContainer;
     Button addButton;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
